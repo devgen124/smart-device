@@ -1,0 +1,31 @@
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__list {
+  @include ptmono(16px, 18px);
+  color: $white;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 0;
+  padding: 0;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 91px;
+  }
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: $white;
+}
+
+.contacts__link-img {
+  margin-right: 6px;
+  vertical-align: middle;
+}

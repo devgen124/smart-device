@@ -1,0 +1,35 @@
+.page-header {
+  background: $dark-blue url("../img/top-mask.png") center top repeat;
+}
+
+.page-header__wrapper {
+  padding: 0 256px 0 253px;
+}
+
+.page-header__top {
+  margin-bottom: 230px;
+  padding-top: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  font-size: 0;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .page-header {
+    background-image: url("../img/top-mask-2x.png");
+    background-size: 1920px auto;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__wrapper {
+    padding: 0 256px 0 253px;
+  }
+}

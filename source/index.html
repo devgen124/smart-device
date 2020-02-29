@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__top">
+        <a href="" class="page-header__logo">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="img/logo-no-text.svg">
+            <img class="page-header__logo-image" src="img/logo-text.svg" width="202" height="52" alt="Smart Device">
+          </picture>
+        </a>
+        <div class="page-header__contacts contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--email" href="#">
+                <svg class="contacts__link-img" role="img" width="19" height="14" viewBox="0 0 19 14">
+                  <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                </svg>
+                info@sd.ru</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--phone" href="#">
+                <svg class="contacts__link-img" role="img" width="18" height="18" viewBox="0 0 18 18">
+                  <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+                </svg>
+                +7 (495) 000 52 52</a>
+            </li>
+          </ul>
+          <button class="contacts__btn button" type="button">Заказать звонок</button>
+        </div>
+      </div>
+      <section class="promo">
+        <h1 class="promo__title">Печатные платы</h1>
+        <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a href="#" class="promo__link button button--big">Получить бесплатную консультацию</a>
+        <picture>
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/boards-tablet.webp 1x, img/boards-tablet-2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/boards-mobile.webp 1x, img/boards-mobile-2x.webp 2x">
+          <source type="image/webp" srcset="img/boards-desktop.webp 1x, img/boards-desktop-2x.webp 2x">
+          <source media="(max-width: 1023px)" srcset="img/boards-tablet.png 1x, img/boards-tablet-2x.png 2x">
+          <source media="(max-width: 767px)" srcset="img/boards-mobile.png 1x, img/boards-mobile-2x.png 2x">
+          <img class="promo__image" src="img/boards-desktop.png" srcset="img/boards-desktop-2x.png 2x" width="705"
+            height="515" alt="Печатные платы">
+        </picture>
+      </section>
+    </div>
+  </header>
 </body>
+
 </html>

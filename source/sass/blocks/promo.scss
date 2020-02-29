@@ -1,0 +1,59 @@
+.promo {
+  position: relative;
+  z-index: 1;
+  min-height: 562px;
+  margin-left: -4px;
+
+  &::after {
+    position: absolute;
+    top: -128px;
+    right: -37px;
+    width: 671px;
+    height: 573px;
+
+    background-image: url("../img/boards-decoration-big.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.promo__title {
+  margin-bottom: 28px;
+
+  @include roboto-bold(80px, 94px);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.promo__text {
+  margin: 0 0 44px 0;
+  padding-left: 97px;
+  max-width: 690px;
+  position: relative;
+
+  @include ptmono(22px, 34px);
+  color: $white;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    width: 66px;
+    height: 2px;
+
+    content: "";
+    background-color: $white;
+  }
+}
+
+.promo__link {
+  margin-left: 97px;
+}
+
+.promo__image {
+  position: absolute;
+  z-index: -1;
+  top: -57px;
+  right: -78px;
+}
