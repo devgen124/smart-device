@@ -9,10 +9,7 @@
   border-radius: 5px;
   cursor: pointer;
 
-  box-sizing: border-box;
-  min-height: 45px;
-  padding: 0 26px;
-  display: block;
+  padding: 14px 26px;
 
   &--big {
     display: inline-block;
@@ -21,5 +18,11 @@
     @include roboto-bold(16px, 19px);
     background-color: $blue;
     border: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .button--big {
+    padding: 18px 31px;
   }
 }

@@ -1,9 +1,11 @@
 .page-header {
   background: $dark-blue url("../img/top-mask.png") center top repeat;
+  overflow: hidden;
 }
 
 .page-header__wrapper {
-  padding: 0 256px 0 253px;
+  padding-right: 256px;
+  padding-left: 253px;
 }
 
 .page-header__top {
@@ -30,6 +32,27 @@
 
 @media (max-width: $tablet-width) {
   .page-header__wrapper {
-    padding: 0 256px 0 253px;
+    padding: 0 25px;
+  }
+
+  .page-header__top {
+    margin-bottom: 116px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__wrapper {
+    padding: 0 17px;
+  }
+
+  .page-header__top {
+    margin-bottom: 232px;
+    padding-top: 17px;
+  }
+
+  .page-header__logo-image {
+    width: 38px;
+    height: 38px;
   }
 }

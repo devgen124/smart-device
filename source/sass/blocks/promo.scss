@@ -1,8 +1,8 @@
 .promo {
   position: relative;
   z-index: 1;
-  min-height: 562px;
   margin-left: -4px;
+  margin-bottom: 273px;
 
   &::after {
     position: absolute;
@@ -55,17 +55,89 @@
   position: absolute;
   z-index: -1;
   top: -57px;
-  right: -78px;
+  right: -80px;
 }
 
 .promo__scroll-link {
   position: absolute;
   left: -34px;
-  bottom: 126px;
+  bottom: -147px;
   transform: rotate(-90deg);
 
   @include ptmono (14px, 16px);
   opacity: 0.5;
   color: $white;
   text-decoration: none;
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    margin-left: 62px;
+    margin-bottom: 163px;
+    max-width: 70%;
+
+    &::after {
+      position: absolute;
+      top: -228px;
+      right: -378px;
+      width: 528.64px;
+      height: 505.5px;
+
+      background-image: url("../img/boards-decoration-small.svg");
+    }
+  }
+
+  .promo__title {
+    margin-left: 0;
+
+    @include roboto-bold(60px, 70px);
+  }
+
+  .promo__text {
+    margin-bottom: 56px;
+    padding-left: 52px;
+
+    @include ptmono(18px, 156.8%);
+
+    &::before {
+      top: 16px;
+      left: 4px;
+      width: 33px;
+    }
+  }
+
+  .promo__image {
+    width: 465px;
+    height: 340px;
+    top: -74px;
+    right: -384px;
+  }
+
+  .promo__link {
+    margin-left: 52px;
+  }
+
+  .promo__scroll-link {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .promo__title {
+    margin-left: 0;
+    margin-bottom: 27px;
+
+    @include roboto-bold(40px, 47px);
+  }
+
+  .promo__text {
+    padding-left: 49px;
+
+    @include ptmono(16px, 156.8%);
+  }
 }
