@@ -4,6 +4,7 @@
   text-transform: uppercase;
   color: $white;
   text-decoration: none;
+  text-align: center;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 5px;
@@ -24,5 +25,12 @@
 @media (max-width: $tablet-width) {
   .button--big {
     padding: 18px 31px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button--big {
+    width: 100%;
+    box-sizing: border-box;
   }
 }

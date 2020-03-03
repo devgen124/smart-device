@@ -1,0 +1,17 @@
+
+.wrapper {
+  margin-right: 13.4%;
+  margin-left: 13.1%;
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper {
+    margin: 0 17px;
+  }
+}

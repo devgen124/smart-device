@@ -1,18 +1,17 @@
 .page-header {
-  background: $dark-blue url("../img/top-mask.png") center top repeat;
-  overflow: hidden;
+  min-height: 300px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -300px;
+  background-color: transparent;
 }
 
-.page-header__wrapper {
-  padding-right: 256px;
-  padding-left: 253px;
-}
-
-.page-header__top {
-  margin-bottom: 230px;
+.page-header__nav {
   padding-top: 33px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .page-header__logo {
@@ -23,30 +22,15 @@
   padding: 0;
 }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .page-header {
-    background-image: url("../img/top-mask-2x.png");
-    background-size: 1920px auto;
-  }
-}
 
 @media (max-width: $tablet-width) {
-  .page-header__wrapper {
-    padding: 0 25px;
-  }
-
-  .page-header__top {
-    margin-bottom: 116px;
+  .page-header__nav {
     padding-top: 20px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .page-header__wrapper {
-    padding: 0 17px;
-  }
-
-  .page-header__top {
+  .page-header__nav {
     margin-bottom: 232px;
     padding-top: 17px;
   }

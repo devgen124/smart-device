@@ -11,12 +11,13 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <div class="page-header__top">
+    <div class="wrapper">
+      <nav class="page-header__nav">
         <a href="" class="page-header__logo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/logo-no-text.svg">
-            <img class="page-header__logo-image" src="img/logo-text-header.svg" width="202" height="52" alt="Smart Device">
+            <img class="page-header__logo-image" src="img/logo-text-header.svg" width="202" height="52"
+              alt="Smart Device">
           </picture>
         </a>
         <div class="page-header__contacts contacts">
@@ -37,9 +38,13 @@
             </li>
           </ul>
           <button class="contacts__btn button" type="button">Заказать звонок</button>
-        </div>
+        </nav>
       </div>
-      <section class="promo">
+    </div>
+  </header>
+  <main>
+    <section class="promo">
+      <div class="wrapper">
         <h1 class="promo__title">Печатные платы</h1>
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a href="#" class="promo__link button button--big">Получить бесплатную консультацию</a>
@@ -55,9 +60,75 @@
             height="515" alt="Печатные платы">
         </picture>
         <a href="" class="promo__scroll-link">Скролл вниз</a>
-      </section>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__intro">
+        <a href="#" class="page-footer__logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-no-text.svg">
+            <img class="page-footer__logo-image" src="img/logo-text-footer.svg" width="216" height="52"
+              alt="Smart Device">
+          </picture>
+        </a>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">
+              <svg role="img" width="27" height="27" viewBox="0 0 27 27">
+                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#">
+              <svg role="img" width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <svg role="img" width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__columns">
+        <nav class="page-footer__col footer-col">
+          <h2 class="footer-col__title">Разделы сайта</h2>
+          <ul class="footer-col__list">
+            <li class="footer-col__item">О компании</li>
+            <li class="footer-col__item">Продукты</li>
+            <li class="footer-col__item">Производство печатных плат</li>
+            <li class="footer-col__item">Монтаж печатных плат</li>
+            <li class="footer-col__item">Комплектующие</li>
+            <li class="footer-col__item">Доставка</li>
+            <li class="footer-col__item">Контакты</li>
+          </ul>
+        </nav>
+        <div class="page-footer__col footer-col">
+          <h2 class="footer-col__title">Наш офис</h2>
+          <address class="footer-col__list">
+            <span class="footer-col__item">г. Мытищи, Олимпийский проспект, д.10</span>
+            <a class="footer-col__item" href="callto:+74955894050">+7 (495) 589-40-50</a>
+            <a class="footer-col__item" href="callto:+79250038767">+7 (925) 003-87-67</a>
+            <a class="footer-col__item" href="callto:+792692608079">7 (926) 926-080-79</a>
+          </address>
+        </div>
+      </div>
     </div>
-  </header>
+    <div class="page-footer__bottom copyright">
+      <span class="copyright__item">Все права защищены</span>
+      <span class="copyright__item">1999-2018 SD Service Devices</span>
+      <span class="copyright__item" <a class="copyright__link" ref="#">Условия конфиденциальности</a></span>
+      <span class="copyright__item">Developed by wow studio</span>
+    </div>
+  </footer>
+<script src="js/script.js"></script>
 </body>
 
 </html>

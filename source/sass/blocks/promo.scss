@@ -1,17 +1,25 @@
 .promo {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   margin-left: -4px;
-  margin-bottom: 273px;
+  padding-top: 261px;
+  padding-bottom: 274px;
+
+  background-color: $dark-blue;
+  background-image: url("../img/top-mask.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
 
   &::after {
     position: absolute;
-    top: -128px;
-    right: -37px;
+    top: 186px;
+    right: 219px;
     width: 671px;
     height: 573px;
 
-    background-image: url("../img/boards-decoration-big.svg");
+    background-image: url("../img/boards-decoration-desktop.svg");
     background-repeat: no-repeat;
     content: "";
   }
@@ -54,14 +62,14 @@
 .promo__image {
   position: absolute;
   z-index: -1;
-  top: -57px;
-  right: -80px;
+  top: 258px;
+  right: 177px;
 }
 
 .promo__scroll-link {
   position: absolute;
-  left: -34px;
-  bottom: -147px;
+  left: 219px;
+  bottom: 127px;
   transform: rotate(-90deg);
 
   @include ptmono (14px, 16px);
@@ -72,36 +80,38 @@
 
 @media (max-width: $tablet-width) {
   .promo {
-    margin-left: 62px;
-    margin-bottom: 163px;
-    max-width: 70%;
+    padding-top: 148px;
+    padding-bottom: 164px;
+    background-size: auto 100%;
 
     &::after {
       position: absolute;
-      top: -228px;
-      right: -378px;
+      top: -40px;
+      right: -200px;
       width: 528.64px;
       height: 505.5px;
 
-      background-image: url("../img/boards-decoration-small.svg");
+      background-image: url("../img/boards-decoration-tablet.svg");
     }
   }
 
   .promo__title {
-    margin-left: 0;
+    max-width: 65%;
+    margin-left: 67px;
 
     @include roboto-bold(60px, 70px);
   }
 
   .promo__text {
+    max-width: 65%;
     margin-bottom: 56px;
-    padding-left: 52px;
+    margin-left: 21px;
 
     @include ptmono(18px, 156.8%);
 
     &::before {
       top: 16px;
-      left: 4px;
+      left: 49px;
       width: 33px;
     }
   }
@@ -109,12 +119,12 @@
   .promo__image {
     width: 465px;
     height: 340px;
-    top: -74px;
-    right: -384px;
+    top: 113px;
+    right: -205px;
   }
 
   .promo__link {
-    margin-left: 52px;
+    margin-left: 118px;
   }
 
   .promo__scroll-link {
@@ -124,8 +134,17 @@
 
 @media (max-width: $mobile-width) {
   .promo {
+    padding-top: 259px;
     margin-left: 0;
-    max-width: 100%;
+    width: 100%;
+
+    &::after {
+      top: -46px;
+      right: -336px;
+      width: 505.02px;
+      height: 510.92px;
+      background-image: url("../img/boards-decoration-mobile.svg");
+    }
   }
 
   .promo__title {
@@ -136,8 +155,33 @@
   }
 
   .promo__text {
+    max-width: 100%;
+    margin-bottom: 43px;
+    margin-left: 0;
     padding-left: 49px;
 
     @include ptmono(16px, 156.8%);
+
+    &::before {
+      left: 0px;
+    }
+  }
+
+  .promo__link {
+    margin-left: 0;
+  }
+
+  .promo__image {
+    width: 301px;
+    height: 220px;
+    top: 92px;
+    right: -7px;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo {
+    background: $dark-blue url("../img/top-mask-2x.png") center bottom repeat;
+    background-size: 50%;
   }
 }
