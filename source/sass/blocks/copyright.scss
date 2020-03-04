@@ -2,6 +2,7 @@
   @include ptmono(13px, 24px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  opacity: 0.5;
 
   a {
     color: inherit;
@@ -25,4 +26,15 @@
 
 .copyright__dev {
   margin-left: auto;
+}
+
+@media (max-width: $tablet-width) {
+  .copyright {
+    display: flex;
+  }
+
+  .copyright__rights,
+  .copyright__term {
+    display: none;
+  }
 }

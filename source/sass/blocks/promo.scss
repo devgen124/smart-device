@@ -5,6 +5,8 @@
   padding-top: 261px;
   padding-bottom: 274px;
 
+  @include wrapping;
+
   background-color: $dark-blue;
   background-image: url("../img/top-mask.png");
   background-position: center bottom;

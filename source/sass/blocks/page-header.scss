@@ -3,6 +3,9 @@
   position: relative;
   z-index: 2;
   margin-bottom: -300px;
+
+  @include wrapping;
+
   background-color: transparent;
 }
 
