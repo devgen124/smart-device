@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   margin-left: -4px;
   padding-top: 261px;
   padding-bottom: 274px;
@@ -16,6 +16,7 @@
 
   &::after {
     position: absolute;
+    z-index: 0;
     top: 186px;
     right: 219px;
     width: 671px;
@@ -63,7 +64,7 @@
 
 .promo__image {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 258px;
   right: 177px;
 }
@@ -137,6 +138,7 @@
 @media (max-width: $mobile-width) {
   .promo {
     padding-top: 259px;
+    padding-bottom: 70px;
     margin-left: 0;
 
     &::after {

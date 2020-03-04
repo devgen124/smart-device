@@ -39,6 +39,7 @@
       vertical-align: middle;
 
       @include roboto-bold(16px, 19px);
+      letter-spacing: 0.05em;
       content: "Бесплатная консультация";
     }
   }
