@@ -13,7 +13,10 @@
   <header class="page-header">
     <nav class="page-header__nav">
       <a href="" class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-text-header.svg" width="202" height="52" alt="Smart Device">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-no-text.svg">
+          <img class="page-header__logo-image" src="img/logo-text-header.svg" width="202" height="52" alt="Smart Device">
+        </picture>
       </a>
       <div class="page-header__contacts contacts">
         <ul class="contacts__list">
@@ -52,7 +55,7 @@
       <a href="" class="promo__scroll-link">Скролл вниз</a>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--nojs">
     <div class="page-footer__top">
       <div class="page-footer__columns">
         <div class="page-footer__intro">
@@ -87,7 +90,8 @@
         <div class="page-footer__wrapper">
           <nav class="page-footer__menu page-footer__col">
             <h2 class="page-footer__title">Разделы сайта</h2>
-            <ul class="page-footer__list page-footer__list--cols">
+            <button class="page-footer__toggle page-footer__toggle--plus" type="button">Открыть/Закрыть</button>
+            <ul class="page-footer__list page-footer__list--cols page-footer__list--show">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Продукты</a></li>
               <li><a href="#">Производство печатных плат</a></li>
@@ -99,6 +103,7 @@
           </nav>
           <div class="page-footer__contacts page-footer__col">
             <h2 class="page-footer__title">Наш офис</h2>
+            <button class="page-footer__toggle page-footer__toggle--plus" type="button">Открыть/Закрыть</button>
             <ul class="page-footer__list">
               <li>г. Мытищи, Олимпийский проспект, д.10</li>
               <li>

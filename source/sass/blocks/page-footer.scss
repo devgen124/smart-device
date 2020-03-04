@@ -1,9 +1,23 @@
 .page-footer {
   padding-top: 65px;
+
+  &--nojs {
+    .page-footer__toggle {
+      display: none;
+    }
+
+    .page-footer__list--show {
+      display: block;
+    }
+  }
 }
 
 .page-footer__logo {
   margin-bottom: 50px;
+}
+
+.page-footer__toggle {
+  display: none;
 }
 
 .page-footer__top {
@@ -173,6 +187,7 @@
 
   .page-footer__col {
     border-bottom: 1px solid rgba($grey, 0.2);
+    position: relative;
 
     @include wrapping;
     padding-top: 30px;
@@ -188,7 +203,55 @@
   }
 
   .page-footer__title {
-    margin-bottom: 34px;
+    margin-bottom: 2px;
     padding-left: 0;
+  }
+
+  .page-footer__list {
+    display: none;
+    margin-top: 30px;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  .page-footer__toggle {
+    display: block;
+    position: absolute;
+    background: transparent;
+    top: 29px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+
+    content: "";
+    font-size: 0;
+    border: none;
+
+    &::before {
+      position: absolute;
+      background-color: $light-grey;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+
+      content: "";
+    }
+  }
+
+  .page-footer__toggle--plus {
+    &::after {
+      position: absolute;
+      background-color: $light-grey;
+      transform: rotate(90deg);
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+
+      content: "";
+    }
   }
 }

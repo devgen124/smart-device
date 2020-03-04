@@ -32,5 +32,14 @@
   .button--big {
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    font-size: 0;
+
+    &::before {
+      vertical-align: middle;
+
+      @include roboto-bold(16px, 19px);
+      content: "Бесплатная консультация";
+    }
   }
 }
