@@ -9,7 +9,7 @@
   background-image: url("../img/top-mask.png");
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   overflow: hidden;
 
   &::after {
@@ -163,7 +163,7 @@
     @include ptmono(16px, 156.8%);
 
     &::before {
-      left: 0px;
+      left: 0;
     }
   }
 

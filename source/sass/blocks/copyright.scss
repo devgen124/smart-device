@@ -1,0 +1,28 @@
+.copyright {
+  @include ptmono(13px, 24px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.copyright__inner {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: flex;
+}
+
+.copyright__rights {
+  margin-right: 75px;
+}
+
+.copyright__term {
+  margin-right: 10%;
+}
+
+.copyright__dev {
+  margin-left: auto;
+}
