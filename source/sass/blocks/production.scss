@@ -1,0 +1,230 @@
+.production {
+  @include outer-wrapper;
+  padding: 60px 0;
+
+  background-color: $dark-blue;
+}
+
+.production__wrapper {
+  @include inner-wrapper;
+  flex-direction: column;
+  padding: 0 120px;
+}
+
+.production__title {
+  padding-left: 14px;
+
+  @include roboto-regular(36px, 51px);
+  color: $white;
+}
+
+.production__list {
+  display: flex;
+  margin-top: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.production__container {
+  position: relative;
+  width: 400px;
+  height: 620px;
+  box-sizing: border-box;
+  padding: 0 15px;
+
+  &::after {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    width: 63px;
+    height: 63px;
+
+    content: "";
+    background-image: url("../img/square-link.svg");
+  }
+
+  a {
+    @include roboto-regular(20px, 30px);
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    &:active,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    width: 170px;
+    top: 32px;
+    left: 58px;
+
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+
+.production__item {
+  width: 370px;
+  height: 620px;
+  box-sizing: border-box;
+
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  &--product {
+    background-image: url("../img/product-desktop.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/product-desktop-2x.png");
+      background-size: 100%;
+    }
+  }
+
+  &--mount {
+    background-image: url("../img/mount-desktop.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mount-desktop-2x.png");
+      background-size: 100%;
+    }
+  }
+
+  &--light {
+    background-image: url("../img/light-desktop.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/light-desktop-2x.png");
+      background-size: 100%;
+    }
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .production {
+    padding-top: 23px;
+    padding-bottom: 16px;
+  }
+
+  .production__wrapper {
+    padding: 0;
+  }
+
+  .production__title {
+    padding-left: 0;
+    padding-right: 90px;
+
+    @include roboto-regular(32px, 140.62%);
+  }
+
+  .production__list {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .production__container {
+    padding: 0;
+    margin-bottom: 46px;
+    width: auto;
+    height: auto;
+
+    h3 {
+      top: 21px;
+      left: 43px;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .production__item {
+    width: 100%;
+    height: 256px;
+    background-size: cover;
+
+    &--product {
+      background-image: url("../img/product-tablet.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/product-tablet-2x.png");
+      }
+    }
+
+    &--mount {
+      background-image: url("../img/mount-tablet.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mount-tablet-2x.png");
+      }
+    }
+
+    &--light {
+      background-image: url("../img/light-tablet.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/light-tablet-2x.png");
+      }
+    }
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    .production {
+      padding-top: 26px;
+    }
+
+    .production__title {
+      margin-bottom: 42px;
+      padding-left: 7px;
+      padding-right: 0;
+
+      @include roboto-regular(28px, 140.62%);
+    }
+
+    .production__list {
+      margin-top: 5px;
+    }
+
+    .production__container {
+      margin-bottom: 30px;
+
+      h3 {
+        top: 0;
+        left: 33px;
+      }
+    }
+
+    .production__item {
+      &--product {
+        background-image: url("../img/product-mobile.png");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/product-mobile-2x.png");
+        }
+      }
+
+      &--mount {
+        background-image: url("../img/mount-mobile.png");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/mount-mobile-2x.png");
+        }
+      }
+
+      &--light {
+        background-image: url("../img/light-tablet.png");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/light-mobile-2x.png");
+        }
+      }
+    }
+  }
+}
