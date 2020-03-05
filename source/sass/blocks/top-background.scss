@@ -1,0 +1,49 @@
+.top-background {
+  position: relative;
+  background-color: $dark-blue;
+  background-image: url("../img/top-mask.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    position: absolute;
+    z-index: 0;
+    top: 118px;
+    right: 219px;
+    width: 670.33px;
+    height: 641px;
+
+    background-image: url("../img/boards-decoration-desktop.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  @media (max-width: $desktop_width - 1) {
+    background-size: auto 100%;
+
+    &::after {
+      top: 3px;
+      right: -198px;
+      width: 528.64px;
+      height: 505.5px;
+
+      background-image: url("../img/boards-decoration-tablet.svg");
+    }
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    &::after {
+      top: -46px;
+      right: -337px;
+      width: 505.02px;
+      height: 482.92px;
+      background-image: url("../img/boards-decoration-mobile.svg");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: $dark-blue url("../img/top-mask-2x.png") center bottom repeat;
+    background-size: 50%;
+  }
+}

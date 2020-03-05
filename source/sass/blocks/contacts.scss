@@ -28,9 +28,18 @@
     margin-right: 6px;
     vertical-align: middle;
   }
+
+  &:hover {
+    color: lighten($blue, 30%);
+  }
+
+  &:active,
+  &:focus {
+    color: rgba($white, 0.6);
+  }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $desktop-width - 1) {
   .contacts__list {
     margin-right: 0;
     position: relative;
@@ -74,7 +83,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $tablet-width - 1) {
   .contacts__list::before {
     left: -65px;
   }

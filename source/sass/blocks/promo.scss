@@ -1,34 +1,21 @@
 .promo {
+  @include outer-wrapper;
+  padding-top: 144px;
+  padding-bottom: 274px;
+  margin-bottom: 113px;
+}
+
+.promo__wrapper {
+  @include inner-wrapper;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 107px;
   position: relative;
   z-index: 1;
-  margin-left: -4px;
-  padding-top: 261px;
-  padding-bottom: 274px;
-
-  @include wrapping;
-
-  background-color: $dark-blue;
-  background-image: url("../img/top-mask.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-
-  &::after {
-    position: absolute;
-    z-index: 0;
-    top: 186px;
-    right: 219px;
-    width: 671px;
-    height: 573px;
-
-    background-image: url("../img/boards-decoration-desktop.svg");
-    background-repeat: no-repeat;
-    content: "";
-  }
 }
 
 .promo__title {
+  margin-left: -97px;
   margin-bottom: 28px;
 
   @include roboto-bold(80px, 94px);
@@ -38,8 +25,7 @@
 }
 
 .promo__text {
-  margin: 0 0 44px 0;
-  padding-left: 97px;
+  margin: 0 0 42px 0;
   max-width: 690px;
   position: relative;
 
@@ -49,7 +35,7 @@
   &::before {
     position: absolute;
     top: 16px;
-    left: 4px;
+    left: -97px;
     width: 66px;
     height: 2px;
 
@@ -58,21 +44,17 @@
   }
 }
 
-.promo__link {
-  margin-left: 97px;
-}
-
 .promo__image {
   position: absolute;
-  z-index: 1;
-  top: 258px;
-  right: 177px;
+  z-index: -1;
+  top: -3px;
+  right: -64px;
 }
 
 .promo__scroll-link {
   position: absolute;
-  left: 219px;
-  bottom: 127px;
+  left: -24px;
+  bottom: -148px;
   transform: rotate(-90deg);
 
   @include ptmono (14px, 16px);
@@ -81,26 +63,20 @@
   text-decoration: none;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $desktop-width - 1) {
   .promo {
-    padding-top: 148px;
-    padding-bottom: 164px;
-    background-size: auto 100%;
+    padding-top: 56px;
+    padding-bottom: 163px;
+    margin-bottom: 53px;
+  }
 
-    &::after {
-      position: absolute;
-      top: -40px;
-      right: -200px;
-      width: 528.64px;
-      height: 505.5px;
-
-      background-image: url("../img/boards-decoration-tablet.svg");
-    }
+  .promo__wrapper {
+    padding-left: 0;
   }
 
   .promo__title {
     max-width: 65%;
-    margin-left: 67px;
+    margin-left: 63px;
 
     @include roboto-bold(60px, 70px);
   }
@@ -108,26 +84,26 @@
   .promo__text {
     max-width: 65%;
     margin-bottom: 56px;
-    margin-left: 21px;
+    margin-left: 114px;
 
     @include ptmono(18px, 156.8%);
 
     &::before {
       top: 16px;
-      left: 49px;
+      left: -48px;
       width: 33px;
     }
+  }
+
+  .promo__link {
+    margin-left: 114px;
   }
 
   .promo__image {
     width: 465px;
     height: 340px;
-    top: 113px;
-    right: -205px;
-  }
-
-  .promo__link {
-    margin-left: 118px;
+    top: -75px;
+    right: -230px;
   }
 
   .promo__scroll-link {
@@ -135,23 +111,16 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $tablet-width - 1) {
   .promo {
-    padding-top: 259px;
+    padding-top: 185px;
     padding-bottom: 70px;
+    margin-bottom: 37px;
     margin-left: 0;
-
-    &::after {
-      top: -46px;
-      right: -336px;
-      width: 505.02px;
-      height: 510.92px;
-      background-image: url("../img/boards-decoration-mobile.svg");
-    }
   }
 
   .promo__title {
-    margin-left: 0;
+    margin-left: -3px;
     margin-bottom: 27px;
 
     @include roboto-bold(40px, 47px);
@@ -177,14 +146,8 @@
   .promo__image {
     width: 301px;
     height: 220px;
-    top: 92px;
-    right: -7px;
+    top: -194px;
+    right: -13px;
   }
 }
 
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .promo {
-    background: $dark-blue url("../img/top-mask-2x.png") center bottom repeat;
-    background-size: 50%;
-  }
-}
