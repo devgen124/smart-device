@@ -1,5 +1,6 @@
 .advantages {
   margin-bottom: 70px;
+  padding-top: 113px;
 
   @include outer-wrapper;
 }
@@ -69,6 +70,7 @@
 @media (max-width: $desktop-width - 1) {
   .advantages {
     margin-bottom: 20px;
+    padding-top: 53px;
   }
 
   .advantages__wrapper {
@@ -125,6 +127,7 @@
 @media (max-width: $tablet-width - 1) {
   .advantages {
     margin-bottom: 37px;
+    padding-top: 37px;
 
     &--marginfix {
       margin-right: -2px;

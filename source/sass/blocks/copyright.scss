@@ -16,6 +16,8 @@
 
 .copyright__wrapper {
   @include inner-wrapper;
+  padding-left: 13px;
+  padding-right: 16px;
 }
 
 .copyright__inner {
@@ -44,6 +46,7 @@
   }
 
   .copyright__wrapper {
+    padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -64,12 +67,12 @@
     text-align: center;
 
     span {
-      padding: 5px 0;
+      padding: 11px 0;
     }
   }
 
   .copyright {
-    padding-top: 5px;
-    padding-bottom: 27px;
+    padding-top: 17px;
+    padding-bottom: 15px;
   }
 }
