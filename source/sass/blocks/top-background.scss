@@ -1,7 +1,7 @@
 .top-background {
   position: relative;
   background-color: $dark-blue;
-  background-image: url("../img/top-mask.png");
+  background-image: url("../img/top-mask.webp");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,6 +43,6 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: $dark-blue url("../img/top-mask-2x.png") center bottom repeat;
+    background: $dark-blue url("../img/top-mask-2x.webp") center bottom repeat;
   }
 }

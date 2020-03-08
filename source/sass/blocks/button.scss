@@ -9,18 +9,21 @@
   border: 1px solid $white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.4s;
 
   padding: 14px 26px;
 
   &:hover {
     color: lighten($blue, 30%);
     border-color: lighten($blue, 30%);
+    transition: 0.4s;
   }
 
   &:active,
   &:focus {
     color: rgba($white, 0.6);
     border-color: rgba($white, 0.6);
+    transition: 0.4s;
   }
 
   &--big {

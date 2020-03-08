@@ -40,18 +40,8 @@
   }
 }
 
-.advantages__item:hover {
-  background-color: $blue;
-  border-color: $blue;
-
-  h3,
-  p {
-    color: $white;
-  }
-
-  svg {
-    fill: $white;
-  }
+.advantages__image {
+  fill: $blue;
 }
 
 .advantages__item {
@@ -65,6 +55,22 @@
   border-bottom: 1px solid $lighter-grey;
   border-left: 3px solid $blue;
   background-color: $white;
+  transition: 0.4s;
+}
+
+.advantages__item:hover {
+  background-color: $blue;
+  border-color: $blue;
+  transition: 0.4s;
+
+  h3,
+  p {
+    color: $white;
+  }
+
+  svg {
+    fill: $white;
+  }
 }
 
 @media (max-width: $desktop-width - 1) {
@@ -128,10 +134,10 @@
   .advantages {
     margin-bottom: 37px;
     padding-top: 37px;
+  }
 
-    &--marginfix {
-      margin-right: -2px;
-    }
+  .advantages__marginfix {
+    margin-right: -2px;
   }
 
   .advantages__list {

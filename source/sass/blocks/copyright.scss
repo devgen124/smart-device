@@ -6,7 +6,7 @@
   @include ptmono(13px, 24px);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  opacity: 0.5;
+  color: rgba($dark-blue, 0.5);
 
   a {
     color: inherit;

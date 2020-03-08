@@ -1,0 +1,123 @@
+.popup {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(black, 0.5);
+}
+
+.popup__window {
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 490px;
+  height: 605px;
+  top: 136px;
+  left: calc(50% - 245px);
+  padding: 6px 39px;
+
+  color: $white;
+  background-color: $blue;
+
+  h2 {
+    margin-bottom: -3px;
+
+    @include roboto-regular(28px, 140.62%);
+  }
+
+  p {
+    margin-right: 10px;
+    margin-bottom: 32px;
+
+    @include ptmono(16px, 22px);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 24px 17px;
+
+    @include ptmono(16px, 22px);
+    color: $white;
+    background-color: rgba($white, 0.1);
+    border: none;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.2);
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    height: 106px;
+    margin-bottom: 25px;
+
+    resize: none;
+  }
+}
+
+.popup__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16.56px;
+  height: 16.56px;
+
+  background-image: url("../img/close.svg");
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.popup__submit {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.popup__agreement {
+  position: relative;
+  box-sizing: inherit;
+  padding-left: 48px;
+  padding-right: 20px;
+
+  @include ptmono(14px, 16px);
+  color: rgba($white, 0.8);
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
+
+  span::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 0;
+
+    content: "";
+    background-image: url("../img/checkbox-non-checked.svg");
+  }
+
+  input:checked + span::before {
+    background-image: url("../img/checkbox-checked.svg");
+  }
+}

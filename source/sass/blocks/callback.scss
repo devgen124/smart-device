@@ -8,10 +8,12 @@
 .callback__wrapper {
   @include inner-wrapper;
   position: relative;
+  z-index: 0;
   padding: 0 120px;
 
   &::before {
     position: absolute;
+    z-index: -1;
     width: 1890.53px;
     height: 764.26px;
     top: -122px;
@@ -71,6 +73,16 @@
   textarea::placeholder {
     color: inherit;
   }
+
+  textarea {
+    resize: none;
+  }
+
+  input:hover,
+  textarea:hover {
+    background-color: rgba($white, 0.2);
+  }
+
 }
 
 .callback__row {
@@ -82,39 +94,39 @@
   input {
     width: 100%;
   }
-
-  &--chbx {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 40px;
-
-    @include ptmono(14px, 16px);
-    color: $white;
-    cursor: pointer;
-
-    input {
-      display: none;
-
-      &:checked + span::before {
-        background-image: url("../img/checkbox-checked.svg");
-      }
-    }
-  }
 }
 
-.callback__label--chbx span {
-  position: relative;
+.callback__label--chbx {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40px;
 
-  &::before {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 2px;
-    left: -33px;
+  @include ptmono(14px, 16px);
+  color: rgba($white, 0.8);
+  cursor: pointer;
 
-    content: "";
-    background-image: url("../img/checkbox-non-checked.svg");
+  &:hover {
+    color: $white;
+  }
+
+  input:checked + span::before {
+    background-image: url("../img/checkbox-checked.svg");
+  }
+
+  span {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: -33px;
+
+      content: "";
+      background-image: url("../img/checkbox-non-checked.svg");
+    }
   }
 }
 

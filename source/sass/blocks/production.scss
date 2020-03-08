@@ -58,6 +58,7 @@
 
   background-position: top center;
   background-repeat: no-repeat;
+  transition: 0.4s;
 
   &::after {
     position: absolute;
@@ -71,37 +72,39 @@
   }
 
   &:hover {
-    opacity: 0.4;
+    box-shadow: 0 0 20px darken($dark-blue, 10%);
+    transition: 0.4s;
   }
 
   &:active,
   &:focus {
     opacity: 0.6;
+    transition: 0.4s;
   }
 
   &--product {
-    background-image: url("../img/product-desktop.png");
+    background-image: url("../img/product-desktop.webp");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/product-desktop-2x.png");
+      background-image: url("../img/product-desktop-2x.webp");
       background-size: 100%;
     }
   }
 
   &--mount {
-    background-image: url("../img/mount-desktop.png");
+    background-image: url("../img/mount-desktop.webp");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/mount-desktop-2x.png");
+      background-image: url("../img/mount-desktop-2x.webp");
       background-size: 100%;
     }
   }
 
   &--light {
-    background-image: url("../img/light-desktop.png");
+    background-image: url("../img/light-desktop.webp");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/light-desktop-2x.png");
+      background-image: url("../img/light-desktop-2x.webp");
       background-size: 100%;
     }
   }
@@ -152,26 +155,26 @@
     }
 
     &--product {
-      background-image: url("../img/product-tablet.png");
+      background-image: url("../img/product-tablet.webp");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/product-tablet-2x.png");
+        background-image: url("../img/product-tablet-2x.webp");
       }
     }
 
     &--mount {
-      background-image: url("../img/mount-tablet.png");
+      background-image: url("../img/mount-tablet.webp");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/mount-tablet-2x.png");
+        background-image: url("../img/mount-tablet-2x.webp");
       }
     }
 
     &--light {
-      background-image: url("../img/light-tablet.png");
+      background-image: url("../img/light-tablet.webp");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/light-tablet-2x.png");
+        background-image: url("../img/light-tablet-2x.webp");
       }
     }
   }
@@ -204,26 +207,26 @@
 
     .production__item {
       &--product {
-        background-image: url("../img/product-mobile.png");
+        background-image: url("../img/product-mobile.webp");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/product-mobile-2x.png");
+          background-image: url("../img/product-mobile-2x.webp");
         }
       }
 
       &--mount {
-        background-image: url("../img/mount-mobile.png");
+        background-image: url("../img/mount-mobile.webp");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/mount-mobile-2x.png");
+          background-image: url("../img/mount-mobile-2x.webp");
         }
       }
 
       &--light {
-        background-image: url("../img/light-tablet.png");
+        background-image: url("../img/light-tablet.webp");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/light-mobile-2x.png");
+          background-image: url("../img/light-mobile-2x.webp");
         }
       }
     }

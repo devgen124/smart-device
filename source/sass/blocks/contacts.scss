@@ -27,15 +27,22 @@
   svg {
     margin-right: 6px;
     vertical-align: middle;
+    fill: $blue;
   }
 
   &:hover {
     color: lighten($blue, 30%);
+    transition: 0.4s;
+
+    svg {
+      fill: darken($blue, 15%);
+    }
   }
 
   &:active,
   &:focus {
     color: rgba($white, 0.6);
+    transition: 0.4s;
   }
 }
 

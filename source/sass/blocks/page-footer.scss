@@ -1,6 +1,8 @@
 .page-footer {
   padding-top: 65px;
 
+  color: $dark-blue;
+
   &--nojs {
     .page-footer__toggle {
       display: none;
@@ -11,14 +13,19 @@
     }
   }
 
+  a {
+    transition: 0.4s;
+  }
+
   a:hover {
-    // color: $dark-grey;
-    opacity: 0.8;
+    color: rgba($dark-blue, 1);
+    transition: 0.4s;
   }
 
   a:active,
   a:focus {
-    opacity: 0.5;
+    color: rgba($dark-blue, 0.2);
+    transition: 0.4s;
   }
 }
 
@@ -83,13 +90,19 @@
     font-size: 0;
   }
 
-  a:hover svg path {
-    fill: $dark-grey;
+  svg {
+    fill: $alter-light-grey;
+  }
+
+  a:hover svg {
+    fill: darken($alter-light-grey, 20%);
+    transition: 0.2s;
   }
 
   a:active,
-  a:focus svg path {
+  a:focus svg {
     fill: $lighter-grey;
+    transition: 0.2s;
   }
 }
 
@@ -112,7 +125,7 @@
 
   li {
     @include ptmono(15px, 25px);
-    opacity: 0.5;
+    color: rgba($dark-blue, 0.5);
 
     a {
       color: inherit;
