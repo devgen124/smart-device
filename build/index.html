@@ -8,7 +8,11 @@
   <meta name="description" content="Печатные платы. Производство и монтаж, поставка комплектующих, блоков и модулей">
   <meta name="keywords" content="печатные платы, производство печатных плат, монтаж печатных плат">
   <title>Smart Device</title>
+  <link rel="preload" href="fonts/PT-Mono-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 
 <body>
@@ -65,51 +69,37 @@
         <div class="advantages__wrapper">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages__list">
-            <li class="advantages__container">
-              <div class="advantages__item">
-                <div class="advantages__image-container">
-                  <svg class="advantages__image advantages__image--stopwatch" role="img" width="29" height="35" viewbox="0 0 29 35">
-                    <use xlink:href="img/sprite_auto.svg#icon-stopwatch" aria-label="Часы"></use>
-                  </svg>
-                </div>
-                <h3>Оперативные сроки</h3>
-                <p>Усовершенствованная логистическая система позволяет нам просчитывать&nbsp;стоимость, производить и
-                  доставлять
-                  заказы плат и комплектующих в самые короткие сроки</p>
-              </div>
+            <li class="advantages__item">
+              <svg class="advantages__image advantages__image--stopwatch" role="img" width="29" height="35" viewbox="0 0 29 35">
+                <use xlink:href="img/sprite_auto.svg#icon-stopwatch" aria-label="Часы"></use>
+              </svg>
+              <h3>Оперативные сроки</h3>
+              <p>Усовершенствованная логистическая система позволяет нам просчитывать&nbsp;стоимость, производить и
+                доставлять
+                заказы плат и комплектующих в самые короткие сроки</p>
             </li>
-            <li class="advantages__container">
-              <div class="advantages__item">
-                <div class="advantages__image-container"><svg class="advantages__image advantages__image--hired" role="img" width="35" height="35" viewbox="0 0 35 35" aria-label="Поставщики">
-                    <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
-                  </svg>
-                </div>
-                <h3>Крупные поставщики</h3>
-                <p class="advantages__marginfix">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
-                  CREE, HOLGLITRONIC, REFOND.
-                  Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-              </div>
+            <li class="advantages__item">
+              <svg class="advantages__image advantages__image--hired" role="img" width="35" height="35" viewbox="0 0 35 35" aria-label="Поставщики">
+                <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
+              </svg>
+              <h3>Крупные поставщики</h3>
+              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
-            <li class="advantages__container">
-              <div class="advantages__item">
-                <div class="advantages__image-container"><svg class="advantages__image advantages__image--detective" role="img" width="36" height="31" viewbox="0 0 36 31" aria-label="Детектив">
-                    <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
-                  </svg>
-                </div>
-                <h3>Полная конфиденциальность</h3>
-                <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-              </div>
+            <li class="advantages__item">
+              <svg class="advantages__image advantages__image--detective" role="img" width="36" height="31" viewbox="0 0 36 31" aria-label="Детектив">
+                <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
+              </svg>
+              <h3>Полная конфиденциальность</h3>
+              <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
             </li>
-            <li class="advantages__container">
-              <div class="advantages__item">
-                <div class="advantages__image-container"><svg class="advantages__image advantages__image--tag" role="img" width="35" height="35" viewbox="0 0 35 35">
-                    <use xlink:href="img/sprite_auto.svg#icon-tag" aria-label="Ценник"></use>
-                  </svg>
-                </div>
-                <h3>Персонализация стоимости</h3>
-                <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-                  устраивает.</p>
-              </div>
+            <li class="advantages__item">
+              <svg class="advantages__image advantages__image--tag" role="img" width="35" height="35" viewbox="0 0 35 35">
+                <use xlink:href="img/sprite_auto.svg#icon-tag" aria-label="Ценник"></use>
+              </svg>
+              <h3>Персонализация стоимости</h3>
+              <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                устраивает.</p>
             </li>
           </ul>
         </div>
@@ -117,12 +107,6 @@
       <section class="about">
         <div class="about__wrapper">
           <div class="about__img-container">
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/2005-tablet.webp 1x, img/2005-tablet-2x.webp 2x">
-              <source type="image/webp" srcset="img/2005-desktop.webp 1x, img/2005-desktop-2x.webp 2x">
-              <source media="(max-width: 1023px)" srcset="img/2005-tablet.png 1x, img/2005-tablet-2x.png 2x">
-              <img class="about__image" src="img/2005-desktop.png" srcset="img/2005-desktop-2x.png 2x" width="220" height="317" alt="2005 год">
-            </picture>
           </div>
           <div class="about__container">
             <h3 class="about__title">О компании</h3>
@@ -143,22 +127,19 @@
       <div class="production__wrapper">
         <h2 class="production__title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="production__list">
-          <li class="production__container">
+          <li class="production__item production__item--product">
             <a href="#">
               <h3>Производство печатных плат</h3>
-              <div class="production__item production__item--product"></div>
             </a>
           </li>
-          <li class="production__container">
+          <li class="production__item production__item--mount">
             <a href="#">
               <h3>Монтаж печатных плат</h3>
-              <div class="production__item production__item--mount"></div>
             </a>
           </li>
-          <li class="production__container">
+          <li class="production__item production__item--light">
             <a href="#">
               <h3>Комплектующие для светотехники</h3>
-              <div class="production__item production__item--light"></div>
             </a>
           </li>
         </ul>
@@ -278,7 +259,7 @@
       <button class="popup__btn" type="button">Закрыть окно</button>
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form action="#" class="popup__form">
+      <form action="#" class="popup__form" method="post">
         <label for="popup-name">
           <input type="text" name="name" id="popup-name" placeholder="Имя" required="">
         </label>
@@ -294,7 +275,8 @@
       </form>
     </div>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 </body>
 
 </html>

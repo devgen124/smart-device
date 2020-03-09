@@ -1,25 +1,4 @@
-@mixin roboto-regular($font-size, $line-height) {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-@mixin roboto-bold($font-size, $line-height) {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-@mixin ptmono($font-size, $line-height) {
-  font-family: "PTMono", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-@mixin outer-wrapper() {
+. {
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;

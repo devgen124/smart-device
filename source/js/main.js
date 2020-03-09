@@ -36,7 +36,6 @@ var KeyCode = {
   function validateCallbackForm(section) {
     var cbForm = section.querySelector('form');
     var telInput = cbForm.querySelector('input[type="tel"]');
-    var checkbox = cbForm.querySelector('input[type="checkbox"]');
     var swap;
 
 
@@ -75,9 +74,6 @@ var KeyCode = {
       telInput.setCustomValidity('Значение поля должно быть в формате: +7(999)9999999');
     });
 
-    checkbox.addEventListener('invalid', function () {
-      checkbox.setCustomValidity('Данное поле должно быть отмечено');
-    });
   }
 
   validateCallbackForm(cbSection);
@@ -90,11 +86,20 @@ var KeyCode = {
   var showButton = document.querySelector('.contacts__btn');
   var popup = document.querySelector('.popup');
   var closeButton = popup.querySelector('.popup__btn');
+  var popupForm = popup.querySelector('.popup__form');
+  var nameInput = popup.querySelector('input[name="name"]');
+  var telInput = popup.querySelector('input[name="tel"]');
+  var questionInput = popup.querySelector('textarea');
+  var nameStorage = localStorage.getItem('name');
+  var telStorage = localStorage.getItem('tel');
+  var questionStorage = localStorage.getItem('question');
 
   function showPopup() {
     popup.classList.remove('visually-hidden');
     document.addEventListener('keydown', onPopupEscPress);
     document.body.style.overflow = 'hidden';
+    getStorage();
+    setStorage();
   }
 
   function closePopup() {
@@ -122,8 +127,8 @@ var KeyCode = {
   document.addEventListener('click', function (evt) {
     var isButton = evt.target === showButton;
     var popupIsHidden = popup.classList.contains('visually-hidden');
-    var popupWindow = popup.querySelectorAll('.popup__window');
-    var isPopup = evt.target === popupWindow;
+    var popupWindow = popup.querySelector('.popup__window');
+    var isPopup = evt.target === popupWindow || popupWindow.contains(evt.target);
 
     if (isButton) {
       if (popupIsHidden) {
@@ -141,6 +146,30 @@ var KeyCode = {
       closePopup();
     }
   });
+
+  function setStorage() {
+    popupForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      if (popupForm.checkValidity() || !nameStorage || !telStorage || !questionStorage) {
+        localStorage.setItem('name', nameInput.value);
+        localStorage.setItem('tel', telInput.value);
+        localStorage.setItem('question', questionInput.value);
+      }
+    });
+  }
+
+  function getStorage() {
+    if (nameStorage) {
+      nameInput.value = nameStorage;
+    }
+    if (telStorage) {
+      telInput.value = telStorage;
+    }
+
+    if (questionStorage) {
+      questionInput.value = questionStorage;
+    }
+  }
 })();
 
 // scroll
@@ -165,14 +194,3 @@ var KeyCode = {
   scrollToBlock(promoLink);
   scrollToBlock(scrollDownLink);
 })();
-
-// scroll-block
-
-// (function () {
-//   var popup = document.querySelector('.popup');
-//   var popupIsShown = !popup.classList.contains('visually-hidden');
-
-//   if (popupIsShown) {
-//     document.body.style.overflow = 'hidden';
-//   }
-// })();

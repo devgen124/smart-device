@@ -1,31 +1,30 @@
 .about {
   @include outer-wrapper;
-  margin: 0 93px;
+  padding-top: 40px;
+  padding-bottom: 100px;
   display: flex;
   align-items: flex-start;
 }
 
 .about__wrapper {
-  @include inner-wrapper;
-  padding: 0 120px;
+  @include inner-wrapper-tighter;
 }
 
 .about__img-container {
-  position: relative;
-  overflow: hidden;
-  width: 220px;
+  flex-shrink: 0;
+  width: 179px;
   height: 317px;
-}
 
-.about__image {
-  position: absolute;
-  top: 7px;
-  left: -15px;
+  background: url("../img/2005-desktop.png") no-repeat -30px 7px;
+  background-size: 220px 317px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/2005-desktop-2x.png");
+  }
 }
 
 .about__container {
-  width: calc(100% - 195px);
-  margin-left: -25px;
+  width: calc(100% - 179px);
 }
 
 .about__title {
@@ -50,12 +49,12 @@
 
 .about__link {
   margin-top: 21px;
-  margin-bottom: 108px;
 }
 
 @media (max-width: $desktop-width - 1) {
   .about {
-    margin: 0;
+    padding-top: 28px;
+    padding-bottom: 80px;
   }
 
   .about__wrapper {
@@ -64,25 +63,22 @@
   }
 
   .about__img-container {
-    height: 361.79px;
-  }
+    width: 189px;
+    height: 354px;
+    background: url("../img/2005-tablet.png") no-repeat -33px -2px;
 
-  .about__image {
-    width: 251.08px;
-    height: 361.79px;
-    top: 0;
-    left: -27px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/2005-tablet-2x.png");
+    }
   }
 
   .about__container {
     width: calc(100% - 189px);
-    margin-left: -30px;
   }
 
   .about__title {
     margin-top: 0;
     margin-bottom: 28px;
-    margin-left: -4px;
 
     @include roboto-regular(32px, 140.62%);
   }
@@ -102,13 +98,15 @@
   }
 
   .about__link {
-    margin-bottom: 81px;
+    margin-top: 16px;
   }
 }
 
 @media (max-width: $tablet-width - 1) {
   .about {
     margin: 0;
+    padding-top: 7px;
+    padding-bottom: 65px;
   }
 
   .about__img-container {
@@ -133,6 +131,5 @@
 
   .about__link {
     margin-top: -9px;
-    margin-bottom: 65px;
   }
 }

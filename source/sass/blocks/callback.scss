@@ -60,7 +60,7 @@
 .callback__form {
   input,
   textarea {
-    padding: 16px;
+    padding: 16px 21px;
     box-sizing: border-box;
 
     @include ptmono(16px, 22px);
@@ -82,7 +82,6 @@
   textarea:hover {
     background-color: rgba($white, 0.2);
   }
-
 }
 
 .callback__row {
@@ -100,7 +99,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-left: 40px;
+  padding-left: 43px;
 
   @include ptmono(14px, 16px);
   color: rgba($white, 0.8);
@@ -152,7 +151,7 @@
 
 @media (max-width: $desktop-width - 1) {
   .callback {
-    padding-top: 55px;
+    padding-top: 52px;
     padding-bottom: 62px;
   }
 

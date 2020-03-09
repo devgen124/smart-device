@@ -1,19 +1,18 @@
 .production {
   @include outer-wrapper;
   padding-top: 60px;
-  padding-bottom: 112px;
+  padding-bottom: 95px;
 
   background-color: $dark-blue;
 }
 
 .production__wrapper {
-  @include inner-wrapper;
+  @include inner-wrapper-tighter;
   flex-direction: column;
-  padding: 0 120px;
 }
 
 .production__title {
-  padding-left: 14px;
+  margin-bottom: 53px;
 
   @include roboto-regular(36px, 51px);
   color: $white;
@@ -21,18 +20,26 @@
 
 .production__list {
   display: flex;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  margin: 0 -30px 0 0;
   padding: 0;
 
   list-style: none;
 }
 
-.production__container {
+
+.production__item {
   position: relative;
-  width: 400px;
-  height: 620px;
+  margin-right: 30px;
+  margin-bottom: 30px;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 50px 44px;
+  width: 370px;
+  height: 620px;
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
 
   a {
     @include roboto-regular(20px, 30px);
@@ -41,28 +48,16 @@
   }
 
   h3 {
-    position: absolute;
+    margin: 0;
     width: 170px;
-    top: 32px;
-    left: 58px;
 
     font-size: inherit;
     font-weight: inherit;
   }
-}
-
-.production__item {
-  width: 370px;
-  height: 620px;
-  box-sizing: border-box;
-
-  background-position: top center;
-  background-repeat: no-repeat;
-  transition: 0.4s;
 
   &::after {
     position: absolute;
-    right: 15px;
+    right: 0;
     bottom: 0;
     width: 63px;
     height: 63px;
@@ -83,28 +78,28 @@
   }
 
   &--product {
-    background-image: url("../img/product-desktop.webp");
+    background-image: url("../img/product-desktop.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/product-desktop-2x.webp");
+      background-image: url("../img/product-desktop-2x.png");
       background-size: 100%;
     }
   }
 
   &--mount {
-    background-image: url("../img/mount-desktop.webp");
+    background-image: url("../img/mount-desktop.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/mount-desktop-2x.webp");
+      background-image: url("../img/mount-desktop-2x.png");
       background-size: 100%;
     }
   }
 
   &--light {
-    background-image: url("../img/light-desktop.webp");
+    background-image: url("../img/light-desktop.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/light-desktop-2x.webp");
+      background-image: url("../img/light-desktop-2x.png");
       background-size: 100%;
     }
   }
@@ -113,7 +108,7 @@
 @media (max-width: $desktop-width - 1) {
   .production {
     padding-top: 23px;
-    padding-bottom: 16px;
+    padding-bottom: 78px;
   }
 
   .production__wrapper {
@@ -121,6 +116,7 @@
   }
 
   .production__title {
+    margin-bottom: 52px;
     padding-left: 0;
     padding-right: 90px;
 
@@ -128,24 +124,13 @@
   }
 
   .production__list {
-    margin-top: 50px;
-    flex-direction: column;
-  }
-
-  .production__container {
-    padding: 0;
-    margin-bottom: 46px;
-    width: auto;
-    height: auto;
-
-    h3 {
-      top: 21px;
-      left: 43px;
-    }
+    margin: 0 0 -45px;
   }
 
   .production__item {
     width: 100%;
+    margin: 0 0 46px;
+    padding: 39px 44px;
     height: 256px;
     background-size: cover;
 
@@ -155,26 +140,26 @@
     }
 
     &--product {
-      background-image: url("../img/product-tablet.webp");
+      background-image: url("../img/product-tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/product-tablet-2x.webp");
+        background-image: url("../img/product-tablet-2x.png");
       }
     }
 
     &--mount {
-      background-image: url("../img/mount-tablet.webp");
+      background-image: url("../img/mount-tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/mount-tablet-2x.webp");
+        background-image: url("../img/mount-tablet-2x.png");
       }
     }
 
     &--light {
-      background-image: url("../img/light-tablet.webp");
+      background-image: url("../img/light-tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/light-tablet-2x.webp");
+        background-image: url("../img/light-tablet-2x.png");
       }
     }
   }
@@ -186,7 +171,7 @@
 
     .production__title {
       margin-bottom: 42px;
-      padding-left: 7px;
+      padding-left: 10px;
       padding-right: 0;
 
       @include roboto-regular(28px, 140.62%);
@@ -196,37 +181,31 @@
       margin-top: 5px;
     }
 
-    .production__container {
-      margin-bottom: 30px;
-
-      h3 {
-        top: 0;
-        left: 33px;
-      }
-    }
-
     .production__item {
+      margin-bottom: 30px;
+      padding: 19px 35px;
+
       &--product {
-        background-image: url("../img/product-mobile.webp");
+        background-image: url("../img/product-mobile.png");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/product-mobile-2x.webp");
+          background-image: url("../img/product-mobile-2x.png");
         }
       }
 
       &--mount {
-        background-image: url("../img/mount-mobile.webp");
+        background-image: url("../img/mount-mobile.png");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/mount-mobile-2x.webp");
+          background-image: url("../img/mount-mobile-2x.png");
         }
       }
 
       &--light {
-        background-image: url("../img/light-tablet.webp");
+        background-image: url("../img/light-mobile.png");
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("../img/light-mobile-2x.webp");
+          background-image: url("../img/light-mobile-2x.png");
         }
       }
     }

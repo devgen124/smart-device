@@ -25,7 +25,6 @@
   color: $white;
 
   svg {
-    margin-right: 6px;
     vertical-align: middle;
     fill: $blue;
   }
@@ -65,7 +64,7 @@
   }
 
   .contacts__item:not(:last-child) {
-    margin-right: 28px;
+    margin-right: 34px;
   }
 
 
@@ -96,6 +95,6 @@
   }
 
   .contacts__item:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 24px;
   }
 }

@@ -9,13 +9,14 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 107px;
+  padding-right: 700px;
   position: relative;
   z-index: 1;
 }
 
 .promo__title {
-  margin-left: -97px;
   margin-bottom: 28px;
+  margin-left: -100px;
 
   @include roboto-bold(80px, 94px);
   letter-spacing: 0.07em;
@@ -25,7 +26,6 @@
 
 .promo__text {
   margin: 0 0 42px 0;
-  max-width: 690px;
   position: relative;
 
   @include ptmono(22px, 34px);
@@ -69,20 +69,18 @@
   }
 
   .promo__wrapper {
-    padding-left: 0;
+    padding-left: 114px;
+    padding-right: 120px;
   }
 
   .promo__title {
-    max-width: 65%;
-    margin-left: 63px;
+    margin-left: -50px;
 
     @include roboto-bold(60px, 70px);
   }
 
   .promo__text {
-    max-width: 65%;
     margin-bottom: 56px;
-    margin-left: 114px;
 
     @include ptmono(18px, 156.8%);
 
@@ -91,10 +89,6 @@
       left: -48px;
       width: 33px;
     }
-  }
-
-  .promo__link {
-    margin-left: 114px;
   }
 
   .promo__image {
@@ -116,8 +110,13 @@
     margin-left: 0;
   }
 
+  .promo__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .promo__title {
-    margin-left: -3px;
+    margin-left: 0;
     margin-bottom: 27px;
 
     @include roboto-bold(40px, 47px);
