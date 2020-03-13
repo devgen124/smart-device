@@ -1,22 +1,24 @@
 .promo {
   @include outer-wrapper;
-  padding-top: 144px;
-  padding-bottom: 274px;
+  background: $dark-blue url("../img/top-mask.png") center bottom no-repeat;
+  background-size: cover;
 }
 
 .promo__wrapper {
   @include inner-wrapper;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 107px;
+  padding-top: 315px;
   padding-right: 700px;
+  padding-bottom: 274px;
   position: relative;
   z-index: 1;
+  background: url("../img/boards-decoration-desktop.svg") top 118px left 790px no-repeat;
 }
 
 .promo__title {
-  margin-bottom: 28px;
-  margin-left: -100px;
+  margin: 0 0 28px;
+  padding-left: 10px;
 
   @include roboto-bold(80px, 94px);
   letter-spacing: 0.07em;
@@ -25,7 +27,8 @@
 }
 
 .promo__text {
-  margin: 0 0 42px 0;
+  margin: 0 0 43px;
+  padding-left: 107px;
   position: relative;
 
   @include ptmono(22px, 34px);
@@ -34,7 +37,7 @@
   &::before {
     position: absolute;
     top: 16px;
-    left: -97px;
+    left: 12px;
     width: 66px;
     height: 2px;
 
@@ -46,14 +49,18 @@
 .promo__image {
   position: absolute;
   z-index: -1;
-  top: -3px;
+  top: 258px;
   right: -64px;
+}
+
+.promo__link {
+  margin-left: 107px;
 }
 
 .promo__scroll-link {
   position: absolute;
   left: -24px;
-  bottom: -148px;
+  bottom: 125px;
   transform: rotate(-90deg);
 
   @include ptmono (14px, 16px);
@@ -63,30 +70,27 @@
 }
 
 @media (max-width: $desktop-width - 1) {
-  .promo {
-    padding-top: 56px;
-    padding-bottom: 163px;
-  }
-
   .promo__wrapper {
-    padding-left: 114px;
-    padding-right: 120px;
+    padding: 188px 120px 65px 63px;
+
+    background: url("../img/boards-decoration-tablet.svg") top 3px right -224px no-repeat;
   }
 
   .promo__title {
-    margin-left: -50px;
+    padding-left: 0;
 
     @include roboto-bold(60px, 70px);
   }
 
   .promo__text {
     margin-bottom: 56px;
+    padding-left: 51px;
 
     @include ptmono(18px, 156.8%);
 
     &::before {
       top: 16px;
-      left: -48px;
+      left: 3px;
       width: 33px;
     }
   }
@@ -94,8 +98,12 @@
   .promo__image {
     width: 465px;
     height: 340px;
-    top: -75px;
+    top: 112px;
     right: -230px;
+  }
+
+  .promo__link {
+    margin-left: 51px;
   }
 
   .promo__scroll-link {
@@ -104,15 +112,10 @@
 }
 
 @media (max-width: $tablet-width - 1) {
-  .promo {
-    padding-top: 185px;
-    padding-bottom: 70px;
-    margin-left: 0;
-  }
-
   .promo__wrapper {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 286px 0 70px;
+
+    background: url("../img/boards-decoration-mobile.svg") top -46px right -353px no-repeat;
   }
 
   .promo__title {
@@ -142,8 +145,7 @@
   .promo__image {
     width: 301px;
     height: 220px;
-    top: -194px;
-    right: -21px;
+    top: 91px;
+    right: -20px;
   }
 }
-
