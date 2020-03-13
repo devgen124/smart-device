@@ -1,28 +1,14 @@
 .middle-background {
-  position: relative;
+  background-image: url("../img/middle-background-decor-big.svg");
+  background-position: top -28px left 0;
+  background-repeat: no-repeat;
 
-  &::before {
-    position: absolute;
-    z-index: -1;
-    width: 2242.16px;
-    height: 1346.21px;
-    top: -28px;
-    left: 0;
+  @media (max-width: $desktop-width - 1) {
+    background-image: url("../img/middle-background-decor-small.svg");
+    background-position: top 92px left 210px;
+  }
 
-    content: "";
-    background-image: url("../img/middle-background-decor-big.svg");
-
-    @media (max-width: $desktop-width - 1) {
-      background-image: url("../img/middle-background-decor-small.svg");
-      width: 872px;
-      height: 873px;
-      top: 90px;
-      left: 211px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      top: 652px;
-      left: -120px;
-    }
+  @media (max-width: $tablet-width - 1) {
+    background-position: top 652px left -121px;
   }
 }
