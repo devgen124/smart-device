@@ -1,69 +1,53 @@
 .production {
   @include outer-wrapper;
-  padding-top: 60px;
-  padding-bottom: 95px;
 
   background-color: $dark-blue;
 }
 
 .production__wrapper {
   @include inner-wrapper-tighter;
-  flex-direction: column;
+  padding-top: 86px;
+  padding-bottom: 95px;
 }
 
 .production__title {
+  margin-top: 0;
   margin-bottom: 53px;
 
   @include roboto-regular(36px, 51px);
   color: $white;
 }
 
-.production__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -30px 0 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-
 .production__item {
+  display: block;
   position: relative;
   margin-right: 30px;
   margin-bottom: 30px;
   box-sizing: border-box;
   padding: 50px 44px;
-  width: 370px;
+  width: calc(33.3% - 20px);
   height: 620px;
 
+  @include roboto-regular(20px, 30px);
+  color: $white;
+  text-decoration: none;
   background-position: top center;
   background-repeat: no-repeat;
   transition: 0.4s;
 
-  a {
-    @include roboto-regular(20px, 30px);
-    color: $white;
-    text-decoration: none;
+  &:nth-child(3n+1) {
+    margin-right: 0;
   }
 
-  h3 {
+  p {
     margin: 0;
     width: 170px;
-
-    font-size: inherit;
-    font-weight: inherit;
   }
 
-  &::after {
+  svg {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 63px;
-    height: 63px;
-
-    content: "";
-    background-image: url("../img/square-link.svg");
   }
 
   &:hover {
@@ -106,13 +90,9 @@
 }
 
 @media (max-width: $desktop-width - 1) {
-  .production {
-    padding-top: 23px;
-    padding-bottom: 78px;
-  }
-
   .production__wrapper {
-    padding: 0;
+    padding-top: 47px;
+    padding-bottom: 31px;
   }
 
   .production__title {
@@ -123,21 +103,12 @@
     @include roboto-regular(32px, 140.62%);
   }
 
-  .production__list {
-    margin: 0 0 -45px;
-  }
-
   .production__item {
     width: 100%;
     margin: 0 0 46px;
     padding: 39px 44px;
     height: 256px;
     background-size: cover;
-
-    &::after {
-      right: 0;
-      bottom: 0;
-    }
 
     &--product {
       background-image: url("../img/product-tablet.png");
@@ -165,8 +136,8 @@
   }
 
   @media (max-width: $tablet-width - 1) {
-    .production {
-      padding-top: 26px;
+    .production__wrapper {
+      padding-top: 52px;
     }
 
     .production__title {
@@ -175,10 +146,6 @@
       padding-right: 0;
 
       @include roboto-regular(28px, 140.62%);
-    }
-
-    .production__list {
-      margin-top: 5px;
     }
 
     .production__item {
