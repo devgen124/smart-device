@@ -1,11 +1,16 @@
 .production {
-  @include outer-wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: $dark-blue;
 }
 
 .production__wrapper {
-  @include inner-wrapper(1170px);
+  width: 1170px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 86px;
   padding-bottom: 95px;
 }
@@ -91,8 +96,7 @@
 
 @media (max-width: $desktop-width - 1) {
   .production__wrapper {
-    padding-top: 47px;
-    padding-bottom: 31px;
+    padding: 47px 25px 31px;
   }
 
   .production__title {
@@ -137,7 +141,7 @@
 
   @media (max-width: $tablet-width - 1) {
     .production__wrapper {
-      padding-top: 52px;
+      padding-top: 52px 15px 31px;
     }
 
     .production__title {

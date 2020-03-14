@@ -1,13 +1,16 @@
 .about {
-  @include outer-wrapper;
-  padding-top: 80px;
-  padding-bottom: 100px;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .about__wrapper {
-  @include inner-wrapper(1170px);
+  width: 1170px;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about__img-container {
@@ -45,14 +48,9 @@
 }
 
 @media (max-width: $desktop-width - 1) {
-  .about {
-    padding-top: 54px;
-    padding-bottom: 80px;
-  }
-
   .about__wrapper {
     display: flex;
-    padding: 0;
+    padding: 54px 25px 80px;
   }
 
   .about__img-container {
@@ -96,10 +94,8 @@
 }
 
 @media (max-width: $tablet-width - 1) {
-  .about {
-    margin: 0;
-    padding-top: 37px;
-    padding-bottom: 65px;
+  .about__wrapper {
+    padding: 37px 15px 65px;
   }
 
   .about__img-container {

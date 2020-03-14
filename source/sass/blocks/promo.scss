@@ -1,16 +1,20 @@
 .promo {
-  @include outer-wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: $dark-blue url("../img/top-mask.png") center bottom no-repeat;
   background-size: cover;
 }
 
 .promo__wrapper {
-  @include inner-wrapper(1440px);
+  width: 1440px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 315px;
-  padding-right: 700px;
-  padding-bottom: 274px;
+  padding: 315px 700px 274px 10px;
   position: relative;
   z-index: 1;
   background: url("../img/boards-decoration-desktop.svg") top 118px left 790px no-repeat;
@@ -18,7 +22,6 @@
 
 .promo__title {
   margin: 0 0 28px;
-  padding-left: 10px;
 
   @include roboto-bold(80px, 94px);
   letter-spacing: 0.07em;
@@ -28,7 +31,7 @@
 
 .promo__text {
   margin: 0 0 43px;
-  padding-left: 107px;
+  padding-left: 97px;
   position: relative;
 
   @include ptmono(22px, 34px);
@@ -54,7 +57,7 @@
 }
 
 .promo__link {
-  margin-left: 107px;
+  margin-left: 97px;
 }
 
 .promo__scroll-link {
@@ -71,7 +74,7 @@
 
 @media (max-width: $desktop-width - 1) {
   .promo__wrapper {
-    padding: 188px 120px 162px 63px;
+    padding: 188px 150px 162px 88px;
 
     background: url("../img/boards-decoration-tablet.svg") top 3px right -224px no-repeat;
   }
@@ -113,9 +116,9 @@
 
 @media (max-width: $tablet-width - 1) {
   .promo__wrapper {
-    padding: 286px 0 70px;
+    padding: 284px 15px 70px;
 
-    background: url("../img/boards-decoration-mobile.svg") top -46px right -353px no-repeat;
+    background: url("../img/boards-decoration-mobile.svg") top -47px right -338px no-repeat;
   }
 
   .promo__title {
@@ -146,6 +149,6 @@
     width: 301px;
     height: 220px;
     top: 91px;
-    right: -20px;
+    right: 0;
   }
 }

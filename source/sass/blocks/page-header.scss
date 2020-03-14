@@ -1,7 +1,8 @@
 .page-header {
-  @include outer-wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: -118px;
-  padding: 33px 0;
   position: relative;
   z-index: 2;
 
@@ -9,9 +10,11 @@
 }
 
 .page-header__wrapper {
-  @include inner-wrapper(1440px);
-  padding-left: 12px;
-  padding-right: 17px;
+  width: 1440px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 33px 17px 33px 12px;
 }
 
 .page-header__logo {
@@ -26,20 +29,21 @@
 @media (max-width: $desktop-width - 1) {
   .page-header {
     margin-bottom: -92px;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   .page-header__wrapper {
     display: flex;
-    padding: 0;
+    padding: 20px 25px;
   }
 }
 
 @media (max-width: $tablet-width - 1) {
   .page-header {
-    margin-bottom: -74px;
-    padding-top: 16px;
+    margin-bottom: -77px;
+  }
+
+  .page-header__wrapper {
+    padding: 16px 15px 25px;
   }
 
   .page-header__logo-image {

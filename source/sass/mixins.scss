@@ -18,29 +18,3 @@
   font-size: $font-size;
   line-height: $line-height;
 }
-
-@mixin outer-wrapper() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: $desktop-width - 1) {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@mixin inner-wrapper($width) {
-  @media (min-width: $desktop-width) {
-    width: $width;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-

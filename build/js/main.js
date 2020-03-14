@@ -194,3 +194,19 @@ var KeyCode = {
   scrollToBlock(promoLink);
   scrollToBlock(scrollDownLink);
 })();
+
+// element transfer
+
+(function () {
+  var html = document.documentElement;
+  var DESKTOP_MIN_WIDTH = 1024;
+  var termSpan = document.querySelector('.copyright__term');
+  var footerIntro = document.querySelector('.page-footer__intro');
+  var social = document.querySelector('.page-footer__social');
+  var termClone = termSpan.cloneNode(true);
+
+  if (html.clientWidth < DESKTOP_MIN_WIDTH) {
+    termSpan.remove();
+    footerIntro.insertBefore(termClone, social);
+  }
+})();

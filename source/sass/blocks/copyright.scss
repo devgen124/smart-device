@@ -1,7 +1,7 @@
 .copyright {
-  @include outer-wrapper;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include ptmono(13px, 24px);
   letter-spacing: 0.04em;
@@ -15,15 +15,11 @@
 }
 
 .copyright__wrapper {
-  @include inner-wrapper(1440px);
-  padding-left: 13px;
-  padding-right: 16px;
-}
-
-.copyright__inner {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  width: 1440px;
+  box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
+  padding: 14px 25px 13px;
 }
 
 .copyright__rights {
@@ -39,15 +35,9 @@
 }
 
 @media (max-width: $desktop-width - 1) {
-  .copyright {
+  .copyright__wrapper {
     padding-top: 19px;
     padding-bottom: 19px;
-    justify-content: space-between;
-  }
-
-  .copyright__wrapper {
-    padding: 0;
-    display: flex;
     justify-content: space-between;
   }
 
@@ -63,16 +53,13 @@
 
 @media (max-width: $tablet-width - 1) {
   .copyright__wrapper {
+    padding-top: 17px;
+    padding-bottom: 15px;
     flex-direction: column;
     text-align: center;
 
     span {
       padding: 11px 0;
     }
-  }
-
-  .copyright {
-    padding-top: 17px;
-    padding-bottom: 15px;
   }
 }
