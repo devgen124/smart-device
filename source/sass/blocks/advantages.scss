@@ -5,7 +5,7 @@
 }
 
 .advantages__wrapper {
-  @include inner-wrapper-tighter;
+  @include inner-wrapper(1170px);
   margin-bottom: -30px;
 }
 

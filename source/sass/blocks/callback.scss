@@ -1,45 +1,33 @@
 .callback {
   @include outer-wrapper;
-  padding-top: 62px;
-  padding-bottom: 72px;
   background-color: $blue;
 }
 
 .callback__wrapper {
-  @include inner-wrapper;
+  @include inner-wrapper(1540px);
+  padding-top: 62px;
+  padding-bottom: 72px;
   position: relative;
   z-index: 0;
-  padding: 0 120px;
+  background: url("../../img/airplane-background.svg") top -58px left -15px no-repeat, url("../../img/airplane.png") top 163px left 161px no-repeat;
 
-  &::before {
-    position: absolute;
-    z-index: -1;
-    width: 1890.53px;
-    height: 764.26px;
-    top: -122px;
-    left: -65px;
-
-    content: "";
-    background-image: url("../img/bottom-background-decor.svg");
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../../img/airplane-background.svg") top -58px left -15px no-repeat, url("../../img/airplane-2x.png") top 163px left 161px no-repeat;
+    background-size: auto, 511px auto;
   }
 }
 
-.callback__img-container {
-  display: flex;
-  justify-content: flex-end;
-  box-sizing: inherit;
-  padding-top: 99px;
-  padding-right: 8.4%;
+.callback__form-container {
   width: 50%;
+  margin-left: auto;
 }
 
-.callback__form-container {
+.callback__form {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 50%;
-  padding: 0 15px;
+  max-width: 585px;
+  padding-left: 15px;
 
   h2 {
     margin-left: -2px;
@@ -55,9 +43,7 @@
     @include ptmono(16px, 22px);
     color: $white;
   }
-}
 
-.callback__form {
   input,
   textarea {
     padding: 16px 21px;
@@ -82,11 +68,6 @@
   textarea:hover {
     background-color: rgba($white, 0.2);
   }
-}
-
-.callback__row {
-  display: flex;
-  margin-bottom: 40px;
 }
 
 .callback__label {
@@ -137,10 +118,11 @@
 .callback__label,
 .callback__btn {
   width: calc(50% - 15.5px);
+  margin-bottom: 40px;
 }
 
 .callback__textarea {
-  margin-bottom: 37px;
+  margin-bottom: 43px;
   height: 154px;
   width: 100%;
 }
@@ -150,31 +132,30 @@
 }
 
 @media (max-width: $desktop-width - 1) {
-  .callback {
+  .callback__wrapper {
     padding-top: 52px;
     padding-bottom: 62px;
-  }
 
-  .callback__wrapper {
-    padding: 0;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  .callback__img-container {
-    display: none;
+    background: none;
   }
 
   .callback__form-container {
-    padding: 0 65px;
     width: 100%;
+    margin-left: 0;
+  }
+
+  .callback__form {
+    width: 100%;
+    padding-left: 0;
 
     h2 {
       margin-bottom: 17px;
 
       @include roboto-regular(32px, 140.62%);
+    }
+
+    p {
+      margin-bottom: 55px;
     }
   }
 
@@ -184,12 +165,12 @@
 }
 
 @media (max-width: $tablet-width - 1) {
-  .callback {
+  .callback__wrapper {
     padding-top: 9px;
     padding-bottom: 11px;
   }
 
-  .callback__form-container {
+  .callback__form {
     padding: 0;
 
     h2 {
@@ -201,11 +182,6 @@
     p {
       margin-bottom: 23px;
     }
-  }
-
-  .callback__row {
-    display: block;
-    margin-bottom: 0;
   }
 
   .callback__label {
@@ -220,11 +196,12 @@
   .callback__btn,
   .callback__textarea {
     width: 100%;
+    margin-right: 0;
     margin-bottom: 30px;
   }
 
   .callback__textarea {
     height: 104px;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 }

@@ -7,7 +7,7 @@
 }
 
 .about__wrapper {
-  @include inner-wrapper-tighter;
+  @include inner-wrapper(1170px);
 }
 
 .about__img-container {

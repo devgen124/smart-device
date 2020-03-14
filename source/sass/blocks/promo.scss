@@ -5,7 +5,7 @@
 }
 
 .promo__wrapper {
-  @include inner-wrapper;
+  @include inner-wrapper(1440px);
   flex-direction: column;
   align-items: flex-start;
   padding-top: 315px;

@@ -5,7 +5,7 @@
 }
 
 .production__wrapper {
-  @include inner-wrapper-tighter;
+  @include inner-wrapper(1170px);
   padding-top: 86px;
   padding-bottom: 95px;
 }

@@ -15,7 +15,7 @@
 }
 
 .copyright__wrapper {
-  @include inner-wrapper;
+  @include inner-wrapper(1440px);
   padding-left: 13px;
   padding-right: 16px;
 }

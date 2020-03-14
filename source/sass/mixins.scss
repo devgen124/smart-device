@@ -35,20 +35,12 @@
   }
 }
 
-@mixin inner-wrapper() {
+@mixin inner-wrapper($width) {
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    width: $width;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-@mixin inner-wrapper-tighter() {
-  @media (min-width: $desktop-width) {
-    width: 1170px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}

@@ -44,7 +44,7 @@
 }
 
 .page-footer__columns {
-  @include inner-wrapper;
+  @include inner-wrapper(1440px);
   padding-left: 15px;
   padding-right: 15px;
 }

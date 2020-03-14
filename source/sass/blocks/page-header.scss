@@ -9,7 +9,7 @@
 }
 
 .page-header__wrapper {
-  @include inner-wrapper;
+  @include inner-wrapper(1440px);
   padding-left: 12px;
   padding-right: 17px;
 }
