@@ -2,38 +2,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $blue;
+
+  background: $blue url("../../img/triangles.svg") calc((100% - 1530px) / 2 + 1571px) 39px no-repeat;
 }
 
 .callback__wrapper {
-  width: 1540px;
+  width: 1530px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 62px;
-  padding-bottom: 72px;
-  position: relative;
-  z-index: 0;
+  padding: 62px 0 72px;
 
-  background: url("../../img/airplane-background.svg") top -58px left -15px no-repeat, url("../../img/airplane.png") top 163px left 161px no-repeat;
+  background-image: url("../../img/airplane-background.svg"), url("../../img/airplane.png");
+  background-position: right 878px top -56px, right 864px top 166px;
+  background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../../img/airplane-background.svg") top -58px left -15px no-repeat, url("../../img/airplane-2x.png") top 163px left 161px no-repeat;
+    background-image: url("../../img/airplane-background.svg"), url("../../img/airplane-2x.png");
     background-size: auto, 511px auto;
   }
 }
 
-.callback__form-container {
-  width: 50%;
-  margin-left: auto;
-}
-
 .callback__form {
+  margin-left: auto;
+  margin-right: 185px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 585px;
-  padding-left: 15px;
+  width: 570px;
 
   h2 {
     margin-left: -2px;
@@ -139,6 +135,10 @@
 }
 
 @media (max-width: $desktop-width - 1) {
+  .callback {
+    background: $blue;
+  }
+
   .callback__wrapper {
     width: 100%;
     padding: 52px 90px 62px;
@@ -146,12 +146,8 @@
     background: none;
   }
 
-  .callback__form-container {
-    width: 100%;
-    margin-left: 0;
-  }
-
   .callback__form {
+    margin: 0;
     width: 100%;
     padding-left: 0;
 

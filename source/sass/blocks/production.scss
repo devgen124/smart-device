@@ -7,12 +7,11 @@
 }
 
 .production__wrapper {
-  width: 1170px;
+  width: 1440px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 86px;
-  padding-bottom: 95px;
+  padding: 86px 135px 95px;
 }
 
 .production__title {
@@ -36,6 +35,7 @@
   @include roboto-regular(20px, 30px);
   color: $white;
   text-decoration: none;
+  background-color: $dark-blue;
   background-position: top center;
   background-repeat: no-repeat;
   transition: 0.4s;

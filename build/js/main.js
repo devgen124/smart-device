@@ -200,13 +200,27 @@ var KeyCode = {
 (function () {
   var html = document.documentElement;
   var DESKTOP_MIN_WIDTH = 1024;
-  var termSpan = document.querySelector('.copyright__term');
-  var footerIntro = document.querySelector('.page-footer__intro');
+  var copyright = document.querySelector('.copyright__wrapper');
+  var conditions = copyright.querySelector('.copyright__conditions');
+  var intro = document.querySelector('.page-footer__intro');
   var social = document.querySelector('.page-footer__social');
-  var termClone = termSpan.cloneNode(true);
+  var termTemp = document.querySelector('#term').content.querySelector('.copyright__term');
+  var termClone = termTemp.cloneNode(true);
 
-  if (html.clientWidth < DESKTOP_MIN_WIDTH) {
-    termSpan.remove();
-    footerIntro.insertBefore(termClone, social);
+  function cutPaste() {
+    if (html.clientWidth < DESKTOP_MIN_WIDTH) {
+      if (copyright.querySelector('.copyright__term')) {
+        copyright.querySelector('.copyright__term').remove();
+      }
+      intro.insertBefore(termClone, social);
+    } else {
+      if (intro.querySelector('.copyright__term')) {
+        intro.querySelector('.copyright__term').remove();
+      }
+      copyright.insertBefore(termClone, conditions);
+    }
   }
+
+  window.addEventListener('resize', cutPaste);
+  cutPaste();
 })();

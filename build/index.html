@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -51,14 +51,6 @@
         <h1 class="promo__title">Печатные платы</h1>
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a href="#callback" class="promo__link button button--big">Получить бесплатную консультацию</a>
-        <picture>
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/boards-mobile.webp 1x, img/boards-mobile-2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1023px)" srcset="img/boards-tablet.webp 1x, img/boards-tablet-2x.webp 2x">
-          <source type="image/webp" srcset="img/boards-desktop.webp 1x, img/boards-desktop-2x.webp 2x">
-          <source media="(max-width: 1023px)" srcset="img/boards-tablet.png 1x, img/boards-tablet-2x.png 2x">
-          <source media="(max-width: 767px)" srcset="img/boards-mobile.png 1x, img/boards-mobile-2x.png 2x">
-          <img class="promo__image" src="img/boards-desktop.png" srcset="img/boards-desktop-2x.png 2x" width="705" height="515" alt="Печатные платы">
-        </picture>
         <a href="#advantages" class="promo__scroll-link">Скролл вниз</a>
       </div>
     </section>
@@ -102,13 +94,6 @@
       </section>
       <section class="about">
         <div class="about__wrapper">
-          <div class="about__img-container">
-            <picture>
-              <source type="image/webp" srcset="img/2005.webp 1x, img/2005-2x.webp 2x">
-              <source srcset="img/2005.png 1x, img/2005-2x.png 2x">
-              <img src="img/2005.png" srcset="img/2005-2x.png 2x" width="114" height="304" alt="2005 год">
-            </picture>
-          </div>
           <div class="about__container">
             <h3>О компании</h3>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
@@ -149,7 +134,6 @@
     </section>
     <section class="callback" id="callback">
       <div class="callback__wrapper">
-        <div class="callback__form-container">
           <form action="#" class="callback__form" method="post">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
@@ -167,7 +151,6 @@
             </label>
           </form>
         </div>
-      </div>
     </section>
   </main>
   <footer class="page-footer page-footer--nojs">
@@ -191,7 +174,7 @@
                 <svg role="img" width="27" height="26" viewbox="0 0 27 26" aria-label="Одноклассники">
                   <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
                 </svg>
-                Ссылка в Односклассники
+                Ссылка в Одноклассники
               </a>
             </li>
             <li class="page-footer__social-item">
@@ -238,7 +221,6 @@
     <div class="page-footer__copyright copyright">
       <div class="copyright__wrapper">
         <span class="copyright__rights">Все права защищены</span>
-        <span class="copyright__term">1999-2018 SD Service Devices</span>
         <span class="copyright__conditions"><a href="#">Условия конфиденциальности</a></span>
         <span class="copyright__dev">Developed by wow studio</span>
       </div>
@@ -265,6 +247,9 @@
       </form>
     </div>
   </section>
+  <template id="term">
+    <span class="copyright__term">1999-2018 SD Service Devices</span>
+  </template>
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
 </body>

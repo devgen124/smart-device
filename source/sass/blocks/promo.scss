@@ -3,8 +3,17 @@
   align-items: center;
   justify-content: center;
 
-  background: $dark-blue url("../img/top-mask.png") center bottom no-repeat;
-  background-size: cover;
+
+  background-color: $dark-blue;
+  background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-desktop.png");
+  background-position: center bottom, calc((100% - 1440px) / 2 + 1126px) 118px, calc((100% - 1440px) / 2 + 1149px) 258px;
+  background-repeat: no-repeat;
+  background-size: cover, auto, auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-desktop-2x.png");
+    background-size: cover, auto, 705px auto;
+  }
 }
 
 .promo__wrapper {
@@ -14,14 +23,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  padding: 315px 700px 274px 10px;
+  padding: 315px 10px 274px;
   position: relative;
   z-index: 1;
-  background: url("../img/boards-decoration-desktop.svg") top 118px left 790px no-repeat;
 }
 
 .promo__title {
   margin: 0 0 28px;
+  max-width: 740px;
 
   @include roboto-bold(80px, 94px);
   letter-spacing: 0.07em;
@@ -31,6 +40,7 @@
 
 .promo__text {
   margin: 0 0 43px;
+  max-width: 610px;
   padding-left: 97px;
   position: relative;
 
@@ -73,14 +83,23 @@
 }
 
 @media (max-width: $desktop-width - 1) {
+  .promo {
+    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-tablet.svg"), url("../img/boards-tablet.png");
+    background-position: center bottom, top 3px right -200px, top 113px right -204px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-tablet-2x.png");
+      background-size: cover, auto, 485px auto;
+    }
+  }
+
   .promo__wrapper {
     padding: 188px 150px 162px 88px;
-
-    background: url("../img/boards-decoration-tablet.svg") top 3px right -224px no-repeat;
   }
 
   .promo__title {
     padding-left: 0;
+    max-width: none;
 
     @include roboto-bold(60px, 70px);
   }
@@ -88,6 +107,7 @@
   .promo__text {
     margin-bottom: 56px;
     padding-left: 51px;
+    max-width: none;
 
     @include ptmono(18px, 156.8%);
 
@@ -115,10 +135,18 @@
 }
 
 @media (max-width: $tablet-width - 1) {
+  .promo {
+    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-mobile.svg"), url("../img/boards-mobile.png");
+    background-position: center bottom, top -46px right -338px, top 92px right 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-mobile-2x.png");
+      background-size: cover, auto, 294px auto;
+    }
+  }
+
   .promo__wrapper {
     padding: 284px 15px 70px;
-
-    background: url("../img/boards-decoration-mobile.svg") top -47px right -338px no-repeat;
   }
 
   .promo__title {

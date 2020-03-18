@@ -47,21 +47,23 @@
   width: 1440px;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .page-footer__col--menu {
-  width: 29vw;
-  margin-left: auto;
-  margin-right: auto;
+  width: 38%;
+  margin-left: -3px;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-footer__intro {
   display: flex;
   flex-direction: column;
-  padding-right: 5vw;
+  width: 21%;
 }
 
 .page-footer__social {
@@ -101,7 +103,7 @@
 
 .page-footer__col {
   h3 {
-    margin: 0 0 26px 0;
+    margin: 0 0 26px -3px;
     padding-left: 5px;
 
     @include roboto-regular(15px, 16px);
@@ -130,8 +132,8 @@
   }
 
   &--cols {
-    column-count: 2;
-    column-gap: 76px;
+    columns: 2;
+    column-gap: 3.5vw;
   }
 }
 

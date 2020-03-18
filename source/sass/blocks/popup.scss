@@ -16,8 +16,8 @@
   flex-direction: column;
   width: 490px;
   height: 605px;
-  top: 136px;
-  left: calc(50% - 245px);
+  top: calc((100vh - 605px) / 2);
+  left: calc((100vw - 490px) / 2);
   padding: 6px 39px;
 
   color: $white;
