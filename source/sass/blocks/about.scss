@@ -11,10 +11,10 @@
   display: flex;
   flex-wrap: wrap;
 
-  background: url("../../img/2005.png") 136px 87px no-repeat;
+  background: url("../img/2005.png") 136px 87px no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../../img/2005-2x.png") 136px 87px no-repeat;
+    background: url("../img/2005-2x.png") 136px 87px no-repeat;
     background-size: 115px auto;
   }
 }
@@ -53,11 +53,11 @@
     display: flex;
     padding: 54px 25px 85px;
 
-    background: url("../../img/2005.png") 28px 60px no-repeat;
+    background: url("../img/2005.png") 28px 60px no-repeat;
     background-size: 131px auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../../img/2005-2x.png") 28px 60px no-repeat;
+      background: url("../img/2005-2x.png") 28px 60px no-repeat;
       background-size: 131px auto;
     }
   }

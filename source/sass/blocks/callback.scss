@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
 
-  background: $blue url("../../img/triangles.svg") calc((100% - 1530px) / 2 + 1571px) 39px no-repeat;
+  background: $blue url("../img/triangles.svg") calc((100% - 1530px) / 2 + 1571px) 39px no-repeat;
 }
 
 .callback__wrapper {
@@ -13,12 +13,12 @@
   flex-wrap: wrap;
   padding: 62px 0 72px;
 
-  background-image: url("../../img/airplane-background.svg"), url("../../img/airplane.png");
+  background-image: url("../img/airplane-background.svg"), url("..//img/airplane.png");
   background-position: right 878px top -56px, right 864px top 166px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/airplane-background.svg"), url("../../img/airplane-2x.png");
+    background-image: url("../img/airplane-background.svg"), url("../img/airplane-2x.png");
     background-size: auto, 511px auto;
   }
 }
