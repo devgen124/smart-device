@@ -16,13 +16,17 @@ var KeyCode = {
 
   cols.forEach(function (col) {
     var btn = col.querySelector('.page-footer__toggle');
+    var title = col.querySelector('h3');
     var list = col.querySelector('.page-footer__list');
     list.classList.remove('page-footer__list--show');
 
-    btn.addEventListener('click', function () {
-      list.classList.toggle('page-footer__list--show');
-      btn.classList.toggle('page-footer__toggle--plus');
-    });
+    function toggleByClick(evt) {
+      if (evt.target === title || evt.target === btn) {
+        list.classList.toggle('page-footer__list--show');
+        btn.classList.toggle('page-footer__toggle--plus');
+      }
+    }
+    col.addEventListener('click', toggleByClick);
   });
 })();
 

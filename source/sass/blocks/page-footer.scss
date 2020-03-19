@@ -55,7 +55,6 @@
 
 .page-footer__col--menu {
   width: 38%;
-  margin-left: -3px;
   display: flex;
   flex-direction: column;
 }
@@ -237,8 +236,8 @@
     padding: 30px 25px 23px;
 
     h3 {
-      margin-bottom: 2px;
-      padding-left: 0;
+      margin: -30px -25px -23px;
+      padding: 30px 25px 23px;
     }
   }
 

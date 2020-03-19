@@ -99,7 +99,7 @@
 
   .promo__title {
     padding-left: 0;
-    max-width: none;
+    max-width: 330px;
 
     @include roboto-bold(60px, 70px);
   }
@@ -107,7 +107,7 @@
   .promo__text {
     margin-bottom: 56px;
     padding-left: 51px;
-    max-width: none;
+    max-width: 400px;
 
     @include ptmono(18px, 156.8%);
 
@@ -152,12 +152,13 @@
   .promo__title {
     margin-left: 0;
     margin-bottom: 27px;
+    max-width: 230px;
 
     @include roboto-bold(40px, 47px);
   }
 
   .promo__text {
-    max-width: 100%;
+    max-width: 280px;
     margin-bottom: 43px;
     margin-left: 0;
     padding-left: 49px;
