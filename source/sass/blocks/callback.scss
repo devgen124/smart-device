@@ -199,6 +199,11 @@ input[name="agreement"]:checked + .callback__label--chbx::before {
     margin-bottom: 30px;
   }
 
+  .callback__label--chbx::before {
+    left: 1px;
+    top: 1px;
+  }
+
   .callback__textarea {
     height: 104px;
     margin-bottom: 30px;
