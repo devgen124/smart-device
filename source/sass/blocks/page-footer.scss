@@ -4,7 +4,8 @@
   height: 316px;
 
   &--nojs {
-    .page-footer__toggle::after {
+    .page-footer__toggle::after,
+    .page-footer__toggle--plus::after {
       display: none;
     }
 

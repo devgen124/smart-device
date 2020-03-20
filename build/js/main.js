@@ -19,6 +19,7 @@ var KeyCode = {
     var list = col.querySelector('.page-footer__list');
 
     list.classList.remove('page-footer__list--show');
+
     col.addEventListener('click', function () {
       list.classList.toggle('page-footer__list--show');
       toggle.classList.toggle('page-footer__toggle--plus');
