@@ -84,6 +84,7 @@
   align-items: center;
   box-sizing: border-box;
   padding-left: 43px;
+  position: relative;
 
   @include ptmono(14px, 16px);
   color: rgba($white, 0.8);
@@ -93,24 +94,20 @@
     color: $white;
   }
 
-  input:checked + span::before {
-    background-image: url("../img/checkbox-checked.svg");
+  &::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 9px;
+    left: 11px;
+
+    content: "";
+    background-image: url("../img/checkbox-non-checked.svg");
   }
+}
 
-  span {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      top: 2px;
-      left: -33px;
-
-      content: "";
-      background-image: url("../img/checkbox-non-checked.svg");
-    }
-  }
+input[name="agreement"]:checked + .callback__label--chbx::before {
+  background-image: url("../img/checkbox-checked.svg");
 }
 
 .callback__label--txt,

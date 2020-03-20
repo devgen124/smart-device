@@ -1,36 +1,23 @@
 .promo {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-  background-color: $dark-blue;
-  background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-desktop.png");
-  background-position: center bottom, calc((100% - 1440px) / 2 + 1126px) 118px, calc((100% - 1440px) / 2 + 1149px) 258px;
-  background-repeat: no-repeat;
-  background-size: cover, auto, auto;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-desktop-2x.png");
-    background-size: cover, auto, 705px auto;
-  }
-}
-
-.promo__wrapper {
   width: 1440px;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 315px 10px 274px;
+  padding: 197px 10px 127px;
   position: relative;
   z-index: 1;
 }
 
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 740px;
+}
+
 .promo__title {
   margin: 0 0 28px;
-  max-width: 740px;
 
   @include roboto-bold(80px, 94px);
   letter-spacing: 0.07em;
@@ -40,7 +27,6 @@
 
 .promo__text {
   margin: 0 0 43px;
-  max-width: 610px;
   padding-left: 97px;
   position: relative;
 
@@ -68,13 +54,11 @@
 
 .promo__link {
   margin-left: 97px;
+  margin-bottom: 132px;
 }
 
 .promo__scroll-link {
-  position: absolute;
-  left: -24px;
-  bottom: 125px;
-  transform: rotate(-90deg);
+  transform: translateX(-36px) rotate(-90deg);
 
   @include ptmono (14px, 16px);
   opacity: 0.5;
@@ -84,17 +68,8 @@
 
 @media (max-width: $desktop-width - 1) {
   .promo {
-    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-tablet.svg"), url("../img/boards-tablet.png");
-    background-position: center bottom, top 3px right -200px, top 113px right -204px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-tablet-2x.png");
-      background-size: cover, auto, 485px auto;
-    }
-  }
-
-  .promo__wrapper {
-    padding: 188px 150px 162px 88px;
+    padding: 96px 150px 162px 88px;
+    width: auto;
   }
 
   .promo__title {
@@ -127,6 +102,7 @@
 
   .promo__link {
     margin-left: 51px;
+    margin-bottom: 0;
   }
 
   .promo__scroll-link {
@@ -136,17 +112,12 @@
 
 @media (max-width: $tablet-width - 1) {
   .promo {
-    background-image: url("../img/top-mask.png"), url("../img/boards-decoration-mobile.svg"), url("../img/boards-mobile.png");
-    background-position: center bottom, top -46px right -338px, top 92px right 0;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/top-mask.png"), url("../img/boards-decoration-desktop.svg"), url("../img/boards-mobile-2x.png");
-      background-size: cover, auto, 294px auto;
-    }
+    padding: 207px 15px 70px;
+    justify-content: center;
   }
 
   .promo__wrapper {
-    padding: 284px 15px 70px;
+    width: 290px;
   }
 
   .promo__title {

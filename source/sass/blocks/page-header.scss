@@ -1,12 +1,8 @@
 .page-header {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: -118px;
   position: relative;
   z-index: 2;
-
-  background-color: transparent;
 }
 
 .page-header__wrapper {
@@ -27,10 +23,6 @@
 
 
 @media (max-width: $desktop-width - 1) {
-  .page-header {
-    margin-bottom: -92px;
-  }
-
   .page-header__wrapper {
     display: flex;
     padding: 20px 25px;
@@ -38,10 +30,6 @@
 }
 
 @media (max-width: $tablet-width - 1) {
-  .page-header {
-    margin-bottom: -79px;
-  }
-
   .page-header__wrapper {
     padding: 16px 15px 25px;
   }

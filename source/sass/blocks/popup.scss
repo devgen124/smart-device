@@ -106,7 +106,7 @@
     color: $white;
   }
 
-  span::before {
+  &::before {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -116,8 +116,8 @@
     content: "";
     background-image: url("../img/checkbox-non-checked.svg");
   }
+}
 
-  input:checked + span::before {
-    background-image: url("../img/checkbox-checked.svg");
-  }
+input[name="popup-agreement"]:checked + .popup__agreement::before {
+  background-image: url("../img/checkbox-checked.svg");
 }

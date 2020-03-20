@@ -1,14 +1,14 @@
 .middle-background {
-  background-image: url("../img/middle-background-decor-big.svg");
-  background-position: top -28px left 0;
+  background-image: url("../img/top-triangle.svg"), url("../img/left-triangle.svg"), url("../img/middle-triangle.svg"), url("../img/right-triangle.svg");
+  background-position: calc((100% - 1440px) / 2 + 129px) 46px, calc((100% - 1440px) / 2 - 97px) 443px, calc((100% - 1440px) / 2 + 755px) 147px, calc((100% - 1440px) / 2 + 1484px) 397px;
   background-repeat: no-repeat;
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/middle-background-decor-small.svg");
-    background-position: top 92px left 210px;
+    background-image: url("../img/middle-triangle.svg");
+    background-position: 210px 92px;
   }
 
   @media (max-width: $tablet-width - 1) {
-    background-position: top 652px left -121px;
+    background-position: -121px 652px;
   }
 }

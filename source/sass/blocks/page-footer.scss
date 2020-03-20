@@ -1,5 +1,7 @@
 .page-footer {
+  flex: 0 0 auto;
   color: $dark-blue;
+  height: 316px;
 
   &--nojs {
     .page-footer__toggle {
@@ -117,17 +119,15 @@
   padding: 0;
 
   li,
-  p {
+  a,
+  span {
+    display: block;
     margin: 0;
 
     @include ptmono(15px, 25px);
     color: rgba($dark-blue, 0.5);
     font-style: normal;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 
   &--cols {
