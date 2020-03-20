@@ -20,13 +20,20 @@ var KeyCode = {
     var list = col.querySelector('.page-footer__list');
     list.classList.remove('page-footer__list--show');
 
-    function toggleByClick(evt) {
-      if (evt.target === title || evt.target === btn) {
-        list.classList.toggle('page-footer__list--show');
-        btn.classList.toggle('page-footer__toggle--plus');
-      }
+    // function toggleByClick(evt) {
+    //   if (evt.target === title || evt.target === btn) {
+    //     list.classList.toggle('page-footer__list--show');
+    //     btn.classList.toggle('page-footer__toggle--plus');
+    //   }
+    // }
+    // col.addEventListener('click', toggleByClick);
+
+    function toggleByClick() {
+      list.classList.toggle('page-footer__list--show');
+      btn.classList.toggle('page-footer__toggle--plus');
     }
-    col.addEventListener('click', toggleByClick);
+    title.addEventListener('click', toggleByClick);
+    btn.addEventListener('click', toggleByClick);
   });
 })();
 
