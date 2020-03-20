@@ -10,23 +10,41 @@ var KeyCode = {
 
 (function () {
   var footer = document.querySelector('.page-footer');
-  var cols = footer.querySelectorAll('.page-footer__col');
+  var columns = footer.querySelector('.page-footer__columns');
+  var cols = columns.querySelectorAll('.page-footer__col');
 
   footer.classList.remove('page-footer--nojs');
 
-  cols.forEach(function (col) {
-    var toggle = col.querySelector('.page-footer__toggle');
-    var list = col.querySelector('.page-footer__list');
-
-    list.classList.remove('page-footer__list--show');
-
-    col.addEventListener('click', function () {
-      list.classList.toggle('page-footer__list--show');
-      toggle.classList.toggle('page-footer__toggle--plus');
+  function hideLists(blocks) {
+    blocks.forEach(function (col) {
+      if (col.querySelector('.page-footer__list--show')) {
+        col.querySelector('.page-footer__toggle').classList.add('page-footer__toggle--plus');
+        col.querySelector('.page-footer__list').classList.remove('page-footer__list--show');
+      }
     });
-  });
-})();
+  }
 
+  function excludeArray(elem, arr) {
+    var res = arr.filter(function (item) {
+      return elem !== item;
+    });
+    return res;
+  }
+
+  function toggleList(evt) {
+    cols.forEach(function (block) {
+      var toggler = block.querySelector('.page-footer__toggle');
+      if (evt.target === toggler) {
+        hideLists(excludeArray(block, Array.from(cols)));
+        block.querySelector('.page-footer__toggle').classList.toggle('page-footer__toggle--plus');
+        block.querySelector('.page-footer__list').classList.toggle('page-footer__list--show');
+      }
+    });
+  }
+
+  hideLists(cols);
+  columns.addEventListener('click', toggleList);
+})();
 
 // validation
 

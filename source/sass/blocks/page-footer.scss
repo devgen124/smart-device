@@ -3,17 +3,6 @@
   color: $dark-blue;
   height: 316px;
 
-  &--nojs {
-    .page-footer__toggle::after,
-    .page-footer__toggle--plus::after {
-      display: none;
-    }
-
-    .page-footer__list--show {
-      display: block;
-    }
-  }
-
   a {
     transition: 0.4s;
   }
@@ -208,6 +197,18 @@
 }
 
 @media (max-width: $tablet-width - 1) {
+  .page-footer--nojs {
+    .page-footer__toggle::after,
+    .page-footer__toggle--plus::after {
+      display: none;
+    }
+
+    .page-footer__list--show {
+      display: block;
+    }
+  }
+
+
   .page-footer__top {
     padding-bottom: 0;
 
